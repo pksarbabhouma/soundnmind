@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sahayak Foundation | Cancer & Mental Health Support" },
-      { name: "description", content: "Supporting cancer patients and mental health warriors with care, compassion, and community. Donate today to make a real difference." },
+      { title: "Sound N Mind | Cancer & Dementia Patient Support" },
+      { name: "description", content: "Supporting dementia patients and cancer warriors with care, compassion, and community. Donate today to make a real difference." },
       { name: "author", content: "Sahayak Foundation" },
-      { property: "og:title", content: "Sahayak Foundation | Cancer & Mental Health Support" },
-      { property: "og:description", content: "Supporting cancer patients and mental health warriors with care, compassion, and community." },
+      { property: "og:title", content: "Sound N Mind | Cancer & Dementia Patient Support" },
+      { property: "og:description", content: "Supporting dementia patients and cancer warriors with care, compassion, and community. Donate today to make a real difference." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@SahayakFoundation" },
+      { name: "twitter:title", content: "Sound N Mind | Cancer & Dementia Patient Support" },
+      { name: "twitter:description", content: "Supporting dementia patients and cancer warriors with care, compassion, and community. Donate today to make a real difference." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8b781685-3a39-40bf-b8ce-269867d9be5b/id-preview-a9f9e66e--392492f3-5bee-4da3-907b-06119d989d89.lovable.app-1781333810217.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8b781685-3a39-40bf-b8ce-269867d9be5b/id-preview-a9f9e66e--392492f3-5bee-4da3-907b-06119d989d89.lovable.app-1781333810217.png" },
     ],
     links: [
       {
