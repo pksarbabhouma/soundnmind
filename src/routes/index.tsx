@@ -246,10 +246,7 @@ function LandingPage() {
                 Where Sound Meets Mind, Healing Begins
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-balance">
-                Sound N Mind is a movement to build emotional resilience across generations — through music, mindfulness, counselling, and community programs designed for those who need them most.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground text-balance">
-                From dementia care for seniors to mental wellbeing in schools, and from supporting cancer warriors to standing by their caregivers — our work is rooted in compassion and powered by science.
+                Sound 'N' Mind Foundation works at the intersection of emotional literacy, mindfulness, sound-based healing, and human connection. Our purpose is simple yet profound: to support emotional well-being across the lifespan through preventive, ethical, and non-clinical approaches.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-6">
                 <div className="rounded-xl border border-border bg-card p-5 shadow-card">
