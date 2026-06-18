@@ -199,20 +199,20 @@ function LandingPage() {
             <span className="text-accent">Compassionate Communities</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl text-balance">
-            Through care, counselling, and community — we walk alongside seniors, students, cancer warriors, and caregivers on their journey to wellbeing.
+            Emotional literacy, mindfulness, sound-based healing, and human connection.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#donate"
+              href="#our-work"
               className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
             >
-              Donate Now — Make a Difference
+              Explore Our Work
             </a>
             <a
-              href="#about"
+              href="#donate"
               className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
             >
-              Learn More
+              Donate for Impact
             </a>
           </div>
           <div className="mt-12 flex items-center justify-center gap-8 text-center">
