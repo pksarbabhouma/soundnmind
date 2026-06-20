@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -17,169 +18,11 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
 });
 
-type MenuItem = {
-  label: string;
-  href: string;
-  submenu?: { label: string; href: string }[];
-};
-
-const MENU: MenuItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Academy", href: "#academy" },
-  {
-    label: "Our Work",
-    href: "#our-work",
-    submenu: [
-      { label: "Senior & Dementia Care", href: "#senior-care" },
-      { label: "Schools", href: "#schools" },
-      { label: "Cancer Warriors & Caregivers", href: "#cancer-warriors" },
-    ],
-  },
-  { label: "Stories & Impact", href: "#videos" },
-  {
-    label: "Get Involved",
-    href: "#get-involved",
-    submenu: [
-      { label: "Partner With Us", href: "#partner" },
-      { label: "Volunteer", href: "#volunteer" },
-      { label: "Donate", href: "#donate" },
-    ],
-  },
-  { label: "Contact Us", href: "#enquiry" },
-];
 
 function LandingPage() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [openSub, setOpenSub] = useState<string | null>(null);
-
   return (
     <div id="home" className="min-h-screen bg-background">
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <a href="#home" className="flex items-center gap-2">
-            <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground text-lg font-bold">
-              S
-            </div>
-            <span className="text-lg font-semibold tracking-tight text-foreground">Sound N Mind</span>
-          </a>
-
-          {/* Desktop menu */}
-          <div className="hidden items-center gap-1 lg:flex">
-            {MENU.map((item) => (
-              <div key={item.label} className="relative group">
-                <a
-                  href={item.href}
-                  className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                >
-                  {item.label}
-                  {item.submenu && (
-                    <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  )}
-                </a>
-                {item.submenu && (
-                  <div className="invisible absolute left-0 top-full pt-1 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-                    <div className="min-w-[240px] rounded-xl border border-border bg-card p-2 shadow-card">
-                      {item.submenu.map((sub) => (
-                        <a
-                          key={sub.label}
-                          href={sub.href}
-                          className="block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
-                        >
-                          {sub.label}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-            <a
-              href="#donate"
-              className="ml-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-cta hover:bg-primary/90 transition-colors"
-            >
-              Donate
-            </a>
-          </div>
-
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setMobileOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-foreground hover:bg-muted lg:hidden"
-            aria-label="Toggle menu"
-          >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        {mobileOpen && (
-          <div className="border-t border-border bg-background lg:hidden">
-            <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6">
-              {MENU.map((item) => (
-                <div key={item.label} className="py-1">
-                  {item.submenu ? (
-                    <>
-                      <button
-                        onClick={() => setOpenSub(openSub === item.label ? null : item.label)}
-                        className="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-muted"
-                      >
-                        {item.label}
-                        <svg
-                          className={`h-4 w-4 transition-transform ${openSub === item.label ? "rotate-180" : ""}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      {openSub === item.label && (
-                        <div className="ml-3 mt-1 border-l border-border pl-3">
-                          {item.submenu.map((sub) => (
-                            <a
-                              key={sub.label}
-                              href={sub.href}
-                              onClick={() => setMobileOpen(false)}
-                              className="block rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
-                            >
-                              {sub.label}
-                            </a>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <a
-                      href={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block rounded-md px-3 py-2 text-sm font-medium text-foreground hover:bg-muted"
-                    >
-                      {item.label}
-                    </a>
-                  )}
-                </div>
-              ))}
-              <a
-                href="#donate"
-                onClick={() => setMobileOpen(false)}
-                className="mt-3 block rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-cta"
-              >
-                Donate
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
+      <Navbar variant="home" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 pt-16 pb-20 sm:px-6 lg:px-8">
@@ -483,69 +326,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-4 py-16 sm:px-6 lg:px-8 bg-navy text-white">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="sm:col-span-2 lg:col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground text-lg font-bold">
-                  S
-                </div>
-                <span className="text-lg font-semibold">Sound N Mind</span>
-              </div>
-              <p className="text-sm leading-relaxed text-white/70">
-                Creating emotionally resilient individuals and compassionate communities across India.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">Our Work</h3>
-              <ul className="space-y-3 text-sm text-white/70">
-                <li><a href="#senior-care" className="hover:text-white transition-colors">Senior & Dementia Care</a></li>
-                <li><a href="#schools" className="hover:text-white transition-colors">Schools</a></li>
-                <li><a href="#cancer-warriors" className="hover:text-white transition-colors">Cancer Warriors & Caregivers</a></li>
-                <li><a href="#academy" className="hover:text-white transition-colors">Academy</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">Contact</h3>
-              <ul className="space-y-3 text-sm text-white/70">
-                <li className="flex items-start gap-2">
-                  <span>📍</span>
-                  <span>42, Lotus Enclave, Andheri East, Mumbai — 400069</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span>📞</span>
-                  <span>+91 98765 43210</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span>✉️</span>
-                  <span>hello@soundnmind.org</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">Follow Us</h3>
-              <div className="flex gap-3">
-                <a href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">𝕏</a>
-                <a href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">f</a>
-                <a href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">📷</a>
-                <a href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">▶️</a>
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 border-t border-white/10 pt-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="text-sm text-white/50">
-              © 2026 Sound N Mind. All rights reserved.
-            </p>
-            <div className="flex gap-6 text-sm text-white/50">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">80G Certificate</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

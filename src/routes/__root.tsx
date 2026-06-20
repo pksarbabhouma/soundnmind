@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Sound N Mind | Cancer & Dementia Patient Support" },
       { name: "description", content: "Supporting dementia patients and cancer warriors with care, compassion, and community. Donate today to make a real difference." },
-      { name: "author", content: "Sahayak Foundation" },
+      { name: "author", content: "Sound N Mind Foundation" },
       { property: "og:title", content: "Sound N Mind | Cancer & Dementia Patient Support" },
       { property: "og:description", content: "Supporting dementia patients and cancer warriors with care, compassion, and community. Donate today to make a real difference." },
       { property: "og:type", content: "website" },
