@@ -18,37 +18,6 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
 });
 
-type MenuItem = {
-  label: string;
-  href: string;
-  submenu?: { label: string; href: string }[];
-};
-
-const MENU: MenuItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Academy", href: "#academy" },
-  {
-    label: "Our Work",
-    href: "#our-work",
-    submenu: [
-      { label: "Senior & Dementia Care", href: "#senior-care" },
-      { label: "Schools", href: "#schools" },
-      { label: "Cancer Warriors & Caregivers", href: "#cancer-warriors" },
-    ],
-  },
-  { label: "Stories & Impact", href: "#videos" },
-  {
-    label: "Get Involved",
-    href: "#get-involved",
-    submenu: [
-      { label: "Partner With Us", href: "#partner" },
-      { label: "Volunteer", href: "#volunteer" },
-      { label: "Donate", href: "#donate" },
-    ],
-  },
-  { label: "Contact Us", href: "#enquiry" },
-];
 
 function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
