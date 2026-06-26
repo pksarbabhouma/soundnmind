@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import { Link } from "@tanstack/react-router";
-
 type MenuItem = {
   label: string;
   href: string;
