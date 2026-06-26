@@ -15,11 +15,11 @@ function getMenu(variant: "home" | "page"): MenuItem[] {
     { label: "Academy", href: `${prefix}academy` },
     {
       label: "Our Work",
-      href: `${prefix}our-work`,
+      href: "/our-work",
       submenu: [
-        { label: "Senior & Dementia Care", href: `${prefix}senior-care` },
-        { label: "Schools", href: `${prefix}schools` },
-        { label: "Cancer Warriors & Caregivers", href: `${prefix}cancer-warriors` },
+        { label: "Senior & Dementia Care", href: "/our-work#senior-care" },
+        { label: "Schools", href: "/our-work#schools" },
+        { label: "Cancer Warriors & Caregivers", href: "/our-work#cancer-warriors" },
       ],
     },
     { label: "Stories & Impact", href: `${prefix}videos` },
@@ -35,6 +35,7 @@ function getMenu(variant: "home" | "page"): MenuItem[] {
     { label: "Contact Us", href: `${prefix}enquiry` },
   ];
 }
+
 
 export function Navbar({ variant }: { variant: "home" | "page" }) {
   const [mobileOpen, setMobileOpen] = useState(false);
