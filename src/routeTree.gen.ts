@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as OurWorkRouteImport } from './routes/our-work'
 import { Route as GetInvolvedRouteImport } from './routes/get-involved'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -23,6 +24,11 @@ const OurWorkRoute = OurWorkRouteImport.update({
 const GetInvolvedRoute = GetInvolvedRouteImport.update({
   id: '/get-involved',
   path: '/get-involved',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AcademyRoute = AcademyRouteImport.update({
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/academy': typeof AcademyRoute
+  '/contact': typeof ContactRoute
   '/get-involved': typeof GetInvolvedRoute
   '/our-work': typeof OurWorkRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/academy': typeof AcademyRoute
+  '/contact': typeof ContactRoute
   '/get-involved': typeof GetInvolvedRoute
   '/our-work': typeof OurWorkRoute
 }
@@ -60,21 +68,36 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/academy': typeof AcademyRoute
+  '/contact': typeof ContactRoute
   '/get-involved': typeof GetInvolvedRoute
   '/our-work': typeof OurWorkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/academy' | '/get-involved' | '/our-work'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/academy'
+    | '/contact'
+    | '/get-involved'
+    | '/our-work'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/academy' | '/get-involved' | '/our-work'
-  id: '__root__' | '/' | '/about' | '/academy' | '/get-involved' | '/our-work'
+  to: '/' | '/about' | '/academy' | '/contact' | '/get-involved' | '/our-work'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/academy'
+    | '/contact'
+    | '/get-involved'
+    | '/our-work'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AcademyRoute: typeof AcademyRoute
+  ContactRoute: typeof ContactRoute
   GetInvolvedRoute: typeof GetInvolvedRoute
   OurWorkRoute: typeof OurWorkRoute
 }
@@ -93,6 +116,13 @@ declare module '@tanstack/react-router' {
       path: '/get-involved'
       fullPath: '/get-involved'
       preLoaderRoute: typeof GetInvolvedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/academy': {
@@ -123,9 +153,20 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AcademyRoute: AcademyRoute,
+  ContactRoute: ContactRoute,
   GetInvolvedRoute: GetInvolvedRoute,
   OurWorkRoute: OurWorkRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

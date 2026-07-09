@@ -32,7 +32,7 @@ function getMenu(variant: "home" | "page"): MenuItem[] {
         { label: "Donate", href: "/get-involved#donate" },
       ],
     },
-    { label: "Contact Us", href: `${prefix}enquiry` },
+    { label: "Contact", href: "/contact" },
   ];
 }
 
