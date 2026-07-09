@@ -20,7 +20,7 @@ export function Footer() {
               <li><a href="/#senior-care" className="hover:text-white transition-colors">Senior & Dementia Care</a></li>
               <li><a href="/#schools" className="hover:text-white transition-colors">Schools</a></li>
               <li><a href="/#cancer-warriors" className="hover:text-white transition-colors">Cancer Warriors & Caregivers</a></li>
-              <li><a href="/#academy" className="hover:text-white transition-colors">Academy</a></li>
+              <li><a href="/academy" className="hover:text-white transition-colors">Academy</a></li>
             </ul>
           </div>
           <div>

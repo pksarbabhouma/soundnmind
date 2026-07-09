@@ -12,7 +12,7 @@ function getMenu(variant: "home" | "page"): MenuItem[] {
   return [
     { label: "Home", href: homeHref },
     { label: "About Us", href: "/about" },
-    { label: "Academy", href: `${prefix}academy` },
+    { label: "Academy", href: "/academy" },
     {
       label: "Our Work",
       href: "/our-work",
