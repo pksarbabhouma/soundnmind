@@ -152,6 +152,14 @@ function LandingPage() {
               description="Self-care, resilience, and burnout prevention workshops for family and professional caregivers."
             />
           </div>
+          <div className="mt-12 text-center">
+            <a
+              href="/academy"
+              className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
+            >
+              Explore Academy →
+            </a>
+          </div>
         </div>
       </section>
 
