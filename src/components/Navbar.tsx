@@ -25,11 +25,11 @@ function getMenu(variant: "home" | "page"): MenuItem[] {
     { label: "Stories & Impact", href: `${prefix}videos` },
     {
       label: "Get Involved",
-      href: `${prefix}get-involved`,
+      href: "/get-involved",
       submenu: [
-        { label: "Partner With Us", href: `${prefix}partner` },
-        { label: "Volunteer", href: `${prefix}volunteer` },
-        { label: "Donate", href: `${prefix}donate` },
+        { label: "Partner With Us", href: "/get-involved#partner" },
+        { label: "Volunteer", href: "/get-involved#volunteer" },
+        { label: "Donate", href: "/get-involved#donate" },
       ],
     },
     { label: "Contact Us", href: `${prefix}enquiry` },
