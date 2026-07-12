@@ -148,47 +148,45 @@ function LandingPage() {
       </section>
 
 
-      {/* Academy Section */}
-      <section id="academy" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
+      {/* Our Focus Areas Section */}
+      <section id="focus-areas" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
-              🎓 The Academy
+              Our Focus Areas
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              Sound N Mind Academy
+              Our Focus Areas
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              Certified training programs in music therapy, mindfulness, and emotional wellbeing — for educators, caregivers, and changemakers.
+              Our work is centered around building emotionally resilient individuals and communities through preventive, compassionate, and evidence-informed approaches.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            <BenefitCard
-              icon="🎵"
-              title="Music Therapy Certification"
-              description="Evidence-based training to use music as a therapeutic tool across age groups and conditions."
-            />
-            <BenefitCard
-              icon="🧘"
-              title="Mindfulness for Educators"
-              description="Equip teachers and school counsellors with practical mindfulness tools for classrooms."
-            />
-            <BenefitCard
-              icon="🤲"
-              title="Caregiver Wellbeing"
-              description="Self-care, resilience, and burnout prevention workshops for family and professional caregivers."
-            />
-          </div>
-          <div className="mt-12 text-center">
-            <a
-              href="/academy"
-              className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
-            >
-              Explore Academy →
-            </a>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { icon: "💗", title: "Emotional Literacy", description: "Building awareness, understanding, and healthy expression of emotions." },
+              { icon: "🧘", title: "Mindfulness & Regulation", description: "Developing calm, resilience, focus, and emotional balance through mindfulness practices." },
+              { icon: "🎵", title: "Sound-Based Support", description: "Using sound, voice, and vibration to promote relaxation, healing, and well-being." },
+              { icon: "🤝", title: "Human Connection", description: "Creating safe spaces for empathy, listening, belonging, and meaningful relationships." },
+              { icon: "🌿", title: "Caregiver Well-being", description: "Supporting caregivers with emotional resilience, self-care, and sustainable well-being." },
+              { icon: "🎓", title: "Capacity Building", description: "Developing skilled practitioners and community leaders through structured learning and training." },
+            ].map((c, i) => (
+              <div
+                key={c.title}
+                className="group flex h-full flex-col rounded-2xl border border-border bg-background p-7 shadow-card transition-all hover:shadow-lg hover:-translate-y-1 animate-fade-in"
+                style={{ animationDelay: `${i * 80}ms`, animationFillMode: "both" }}
+              >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-2xl transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  {c.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-foreground">{c.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* Our Work Section */}
       <section id="our-work" className="px-4 py-20 sm:px-6 lg:px-8">
