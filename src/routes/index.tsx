@@ -187,6 +187,95 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* Programs Snapshot Section */}
+      <section id="programs-snapshot" className="px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+              Programs Snapshot
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+              Programs Snapshot
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
+              Creating meaningful impact across communities through focused emotional well-being initiatives.
+            </p>
+          </div>
+          <div className="space-y-8">
+            {[
+              {
+                icon: "👵",
+                title: "Seniors & Dementia Care",
+                partner: "In collaboration with Dementia India Alliance",
+                description: "Supporting seniors and individuals living with dementia through emotional companionship, caregiver support, meaningful engagement, and community-based care.",
+                primary: { label: "Learn More", href: "/our-work#senior-care" },
+                secondary: { label: "Support This Cause", href: "/get-involved#donate" },
+                iconBg: "bg-teal-light",
+                reverse: false,
+              },
+              {
+                icon: "🏫",
+                title: "Schools – MindWell Club",
+                partner: "ELMA Initiative",
+                description: "Helping students, educators, and school communities build emotional literacy, resilience, mindfulness, and healthy relationships through the MindWell Club.",
+                primary: { label: "Bring to Your School", href: "/get-involved#partner" },
+                secondary: { label: "Sponsor a School", href: "/get-involved#donate" },
+                iconBg: "bg-coral-light",
+                reverse: true,
+              },
+              {
+                icon: "🎗️",
+                title: "Cancer Warriors & Caregivers",
+                partner: null,
+                description: "Providing compassionate emotional support and resilience-building for individuals living with cancer and the caregivers who walk alongside them.",
+                primary: { label: "Explore Program", href: "/our-work#cancer-warriors" },
+                secondary: { label: "Donate for Care", href: "/get-involved#donate" },
+                iconBg: "bg-teal-light",
+                reverse: false,
+              },
+            ].map((p, i) => (
+              <div
+                key={p.title}
+                className={`group flex flex-col gap-8 rounded-3xl border border-border bg-card p-8 shadow-card transition-all hover:shadow-lg hover:-translate-y-1 animate-fade-in md:p-10 lg:flex-row lg:items-center ${p.reverse ? "lg:flex-row-reverse" : ""}`}
+                style={{ animationDelay: `${i * 100}ms`, animationFillMode: "both" }}
+              >
+                <div className={`flex shrink-0 items-center justify-center ${p.iconBg} h-24 w-24 rounded-2xl text-5xl transition-transform group-hover:scale-105 lg:h-32 lg:w-32 lg:text-6xl`}>
+                  {p.icon}
+                </div>
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-2xl font-bold text-foreground sm:text-3xl">{p.title}</h3>
+                  {p.partner && (
+                    <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground">
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                      {p.partner}
+                    </div>
+                  )}
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                    {p.description}
+                  </p>
+                </div>
+                <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col lg:items-stretch">
+                  <a
+                    href={p.primary.href}
+                    className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
+                  >
+                    {p.primary.label}
+                  </a>
+                  <a
+                    href={p.secondary.href}
+                    className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
+                  >
+                    {p.secondary.label}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
 
       {/* Our Work Section */}
       <section id="our-work" className="px-4 py-20 sm:px-6 lg:px-8">
