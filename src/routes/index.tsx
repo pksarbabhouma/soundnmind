@@ -252,7 +252,7 @@ function LandingPage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Bring our programs to your school, hospital, or care facility through long-term partnerships.
               </p>
-              <a href="#enquiry" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Become a partner →</a>
+              <a href="/get-involved#partner" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Become a partner →</a>
             </div>
             <div id="volunteer" className="rounded-2xl border border-border bg-card p-7 shadow-card">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-2xl">🙋</div>
@@ -260,7 +260,7 @@ function LandingPage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Lend your time and talent — as a musician, counsellor, facilitator, or behind-the-scenes hero.
               </p>
-              <a href="#enquiry" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Sign up to volunteer →</a>
+              <a href="/get-involved#volunteer" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Sign up to volunteer →</a>
             </div>
             <div className="rounded-2xl border border-border bg-card p-7 shadow-card">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-2xl">💛</div>
@@ -268,7 +268,7 @@ function LandingPage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Fund therapy sessions, training, and care programs that change lives every day.
               </p>
-              <a href="#donate" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Donate now →</a>
+              <a href="/get-involved#donate" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Donate now →</a>
             </div>
           </div>
         </div>
