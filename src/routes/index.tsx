@@ -252,7 +252,7 @@ function LandingPage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Bring our programs to your school, hospital, or care facility through long-term partnerships.
               </p>
-              <a href="#enquiry" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Become a partner →</a>
+              <a href="/get-involved#partner" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Become a partner →</a>
             </div>
             <div id="volunteer" className="rounded-2xl border border-border bg-card p-7 shadow-card">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-2xl">🙋</div>
