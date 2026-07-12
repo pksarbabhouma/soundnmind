@@ -58,20 +58,31 @@ function LandingPage() {
               Donate for Impact
             </a>
           </div>
-          <div className="mt-12 flex items-center justify-center gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-foreground">10,000+</div>
-              <div className="text-sm text-muted-foreground">Lives Touched</div>
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground">
+                Our Impact
+              </div>
             </div>
-            <div className="h-10 w-px bg-border" />
-            <div>
-              <div className="text-3xl font-bold text-foreground">200+</div>
-              <div className="text-sm text-muted-foreground">Schools & Centres</div>
-            </div>
-            <div className="hidden h-10 w-px bg-border sm:block" />
-            <div className="hidden sm:block">
-              <div className="text-3xl font-bold text-foreground">50+</div>
-              <div className="text-sm text-muted-foreground">Partner Hospitals</div>
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
+              {[
+                { icon: "🌱", value: "25+", label: "Communities Reached" },
+                { icon: "💛", value: "5,000+", label: "Lives Touched" },
+                { icon: "🎓", value: "150+", label: "Practitioners Trained" },
+                { icon: "🤝", value: "40+", label: "Partner Institutions" },
+              ].map((m, i) => (
+                <div
+                  key={m.label}
+                  className="rounded-2xl border border-border bg-card p-6 shadow-card text-center animate-fade-in transition-all hover:shadow-lg hover:-translate-y-1"
+                  style={{ animationDelay: `${i * 100}ms`, animationFillMode: "both" }}
+                >
+                  <div className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-teal-light text-2xl">
+                    {m.icon}
+                  </div>
+                  <div className="text-3xl font-extrabold text-foreground sm:text-4xl">{m.value}</div>
+                  <div className="mt-2 text-sm font-medium text-muted-foreground">{m.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
