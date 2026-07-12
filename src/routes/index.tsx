@@ -268,7 +268,7 @@ function LandingPage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Fund therapy sessions, training, and care programs that change lives every day.
               </p>
-              <a href="#donate" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Donate now →</a>
+              <a href="/get-involved#donate" className="mt-4 inline-block text-sm font-semibold text-primary hover:underline">Donate now →</a>
             </div>
           </div>
         </div>
