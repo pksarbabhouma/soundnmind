@@ -91,46 +91,62 @@ function LandingPage() {
       {/* About Section */}
       <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
-                About Sound N Mind
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-                Where Sound Meets Mind, Healing Begins
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-balance">
-                Sound 'N' Mind Foundation works at the intersection of emotional literacy, mindfulness, sound-based healing, and human connection. Our purpose is simple yet profound: to support emotional well-being across the lifespan through preventive, ethical, and non-clinical approaches.
-              </p>
-              <div className="mt-8 grid grid-cols-2 gap-6">
-                <div className="rounded-xl border border-border bg-card p-5 shadow-card">
-                  <div className="text-2xl font-bold text-primary">2,500+</div>
-                  <div className="text-sm text-muted-foreground">Patients & seniors supported</div>
-                </div>
-                <div className="rounded-xl border border-border bg-card p-5 shadow-card">
-                  <div className="text-2xl font-bold text-accent">7,500+</div>
-                  <div className="text-sm text-muted-foreground">Therapy & counselling sessions</div>
-                </div>
-              </div>
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
+              About Sound 'N' Mind
             </div>
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-teal-light/60 to-coral-light/40 blur-2xl" />
-              <div className="relative rounded-2xl border border-border bg-card p-8 shadow-card">
-                <blockquote className="text-xl font-medium leading-relaxed text-foreground italic">
-                  "Sound N Mind brought music and meaning back into my mother's life. We finally felt seen and supported through her dementia journey."
-                </blockquote>
-                <div className="mt-6 flex items-center gap-4">
-                  <div className="grid h-12 w-12 place-items-center rounded-full bg-muted text-lg">👤</div>
-                  <div>
-                    <div className="font-semibold text-foreground">Priya Sharma</div>
-                    <div className="text-sm text-muted-foreground">Caregiver, Bengaluru</div>
-                  </div>
-                </div>
-              </div>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+              About Sound 'N' Mind
+            </h2>
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground text-balance">
+              Sound 'N' Mind is dedicated to building emotionally resilient individuals and communities through preventive emotional well-being initiatives, compassionate care, and professional capacity building. We believe emotional well-being should be accessible, ethical, and community-driven.
+            </p>
+          </div>
+
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground">
+              Our Dual Engine
             </div>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              {
+                icon: "🤝",
+                title: "MindWell Club",
+                subtitle: "Community Impact",
+                description:
+                  "MindWell Club creates safe, inclusive spaces where individuals and communities access preventive emotional well-being programs, peer support, mindfulness practices, and compassionate care.",
+              },
+              {
+                icon: "🎓",
+                title: "Sound 'N' Mind Academy",
+                subtitle: "Capacity Building",
+                description:
+                  "The Academy develops emotionally skilled and ethically grounded practitioners through structured certification programs, practical learning, and continuous professional development.",
+              },
+            ].map((c, i) => (
+              <div
+                key={c.title}
+                className="group rounded-2xl border border-border bg-card p-8 shadow-card transition-all hover:shadow-lg hover:-translate-y-1 animate-fade-in"
+                style={{ animationDelay: `${i * 100}ms`, animationFillMode: "both" }}
+              >
+                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-teal-light text-3xl transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  {c.icon}
+                </div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+                  {c.subtitle}
+                </div>
+                <h3 className="mt-1 text-2xl font-bold text-foreground">{c.title}</h3>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  {c.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* Academy Section */}
       <section id="academy" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
