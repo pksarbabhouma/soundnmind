@@ -426,28 +426,6 @@ function BenefitCard({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function VideoCard({ title, videoId, description }: { title: string; videoId: string; description: string }) {
-  return (
-    <div className="rounded-2xl border border-border bg-background overflow-hidden shadow-card transition-all hover:shadow-lg">
-      <div className="aspect-video bg-muted">
-        <iframe
-          width="100%"
-          height="100%"
-          src={`https://www.youtube.com/embed/${videoId}`}
-          title={title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="h-full w-full"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-lg font-semibold text-foreground">{title}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
-      </div>
-    </div>
-  );
-}
-
 function DonationAmount({ amount }: { amount: string }) {
   return (
     <button className="rounded-xl border-2 border-border bg-background px-6 py-3 text-base font-semibold text-foreground transition-all hover:border-primary hover:bg-teal-light hover:text-primary">
