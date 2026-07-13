@@ -218,7 +218,7 @@ function LandingPage() {
                 title: "Schools – MindWell Club",
                 partner: "ELMA Initiative",
                 description: "Helping students, educators, and school communities build emotional literacy, resilience, mindfulness, and healthy relationships through the MindWell Club.",
-                primary: { label: "Bring to Your School", href: "/get-involved#partner" },
+                primary: { label: "Bring to Your School", href: "/our-work#schools" },
                 secondary: { label: "Sponsor a School", href: "/get-involved#donate" },
                 iconBg: "bg-coral-light",
                 reverse: true,
