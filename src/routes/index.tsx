@@ -277,48 +277,18 @@ function LandingPage() {
 
 
 
-      {/* Our Work Section */}
-      <section id="our-work" className="px-4 py-20 sm:px-6 lg:px-8">
+      {/* Testimonials Section */}
+      <section id="testimonials" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              Our Work
+              Testimonials
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              Three focus areas. One shared mission — building emotional resilience where it matters most.
+              Real stories of connection, compassion, and emotional well-being from the communities we serve.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            <a href="/our-work#senior-care" className="group rounded-2xl border border-border bg-card p-7 shadow-card transition-all hover:shadow-lg hover:-translate-y-1">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-2xl group-hover:bg-teal/20 transition-colors">👵</div>
-              <h3 className="text-lg font-semibold text-foreground">Senior & Dementia Care</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Music-based therapy and engagement programs for elders living with dementia, Alzheimer's, and loneliness.
-              </p>
-            </a>
-            <a href="/our-work#schools" className="group rounded-2xl border border-border bg-card p-7 shadow-card transition-all hover:shadow-lg hover:-translate-y-1">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-2xl group-hover:bg-teal/20 transition-colors">🏫</div>
-              <h3 className="text-lg font-semibold text-foreground">Schools</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Social-emotional learning, mindfulness, and creative arts curricula that nurture resilient young minds.
-              </p>
-            </a>
-            <a href="/our-work#cancer-warriors" className="group rounded-2xl border border-border bg-card p-7 shadow-card transition-all hover:shadow-lg hover:-translate-y-1">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-2xl group-hover:bg-teal/20 transition-colors">🎗️</div>
-              <h3 className="text-lg font-semibold text-foreground">Cancer Warriors & Caregivers</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Counselling, support circles, and music therapy for patients and the families walking with them.
-              </p>
-            </a>
-          </div>
-          <div className="mt-12 text-center">
-            <a
-              href="/our-work"
-              className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
-            >
-              View all programs →
-            </a>
-          </div>
+          <TestimonialsCarousel />
         </div>
       </section>
 
