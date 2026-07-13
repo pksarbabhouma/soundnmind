@@ -293,6 +293,53 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* Partners & Collaborators Section */}
+      <section id="partners" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+              Partners & Collaborators
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
+              We are grateful to collaborate with organizations that share our commitment to building emotionally resilient individuals and communities.
+            </p>
+          </div>
+
+          {[
+            { name: "Schools", logos: ["Vidya Academy", "Bright Minds School", "Harmony High"] },
+            { name: "Hospitals", logos: ["CareWell Hospital", "Serenity Medical", "Wellness Clinic"] },
+            { name: "NGOs", logos: ["Dementia India Alliance", "Hope Foundation", "Compassion Trust"] },
+            { name: "CSR Partners", logos: ["Aurora Corp", "Lumen Industries", "NorthStar Group"] },
+            { name: "Service Organizations", logos: ["Rotary Club", "Lions International", "Round Table"] },
+          ].map((category, cIdx) => (
+            <div key={category.name} className={cIdx === 0 ? "" : "mt-14"}>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground text-center mb-8">
+                {category.name}
+              </h3>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+                {category.logos.map((logo, i) => (
+                  <div
+                    key={logo}
+                    className="flex h-24 items-center justify-center rounded-xl border border-border bg-background px-4 py-3 shadow-card grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-105 animate-fade-in"
+                    style={{ animationDelay: `${i * 60}ms` }}
+                  >
+                    <span className="text-sm font-semibold text-foreground/70 text-center leading-tight">
+                      {logo}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <p className="mt-14 text-center text-sm text-muted-foreground max-w-2xl mx-auto text-balance">
+            We proudly collaborate with organizations dedicated to emotional well-being, education, healthcare, and community impact.
+          </p>
+        </div>
+      </section>
+
+
+
       {/* YouTube Video Section */}
       <section id="videos" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
