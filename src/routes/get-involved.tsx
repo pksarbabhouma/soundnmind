@@ -198,24 +198,25 @@ function GetInvolvedPage() {
                   <h4 className="text-lg font-semibold text-foreground mb-2">
                     {cause.title}
                   </h4>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-muted-foreground mb-6">
                     {cause.description}
                   </p>
+                  <a
+                    href="/#donate"
+                    className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
+                  >
+                    Support Us
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </div>
               ))}
             </div>
             <div className="text-center">
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-balance">
+              <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
                 Every contribution supports ethical, human-centered emotional care.
               </p>
-              <a
-                href="/#donate"
-                className="inline-flex items-center justify-center rounded-xl bg-primary px-10 py-4 text-lg font-bold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
-              >
-                Support Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
             </div>
+
           </div>
         </div>
       </section>
