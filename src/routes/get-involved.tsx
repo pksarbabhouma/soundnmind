@@ -80,7 +80,7 @@ function GetInvolvedPage() {
                 We collaborate with schools, hospitals, NGOs, housing societies, CSR partners, and service organizations to design and deliver sustainable emotional well-being programs.
               </p>
               <a
-                href="/#enquiry"
+                href="/contact#start-a-conversation"
                 className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
               >
                 Start a Conversation
