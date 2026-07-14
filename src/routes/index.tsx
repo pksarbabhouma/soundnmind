@@ -351,10 +351,10 @@ function LandingPage() {
                 🙏 100% of donations fund our programs
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-                Be the Reason Someone Smiles Today
+                Be Part of a More Emotionally Resilient World
               </h2>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-balance">
-                Your donation funds music therapy sessions, school programs, and care for cancer warriors and their families.
+                Your donation helps make preventive emotional care accessible to those who need it most. Every contribution supports elderly care, school emotional well-being programs, and compassionate care for cancer warriors and their families.
               </p>
               <div className="mt-10 flex flex-col items-center gap-4">
                 <div className="flex flex-wrap justify-center gap-3">
