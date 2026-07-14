@@ -127,7 +127,7 @@ function AcademyPage() {
                 Our programs are built for working professionals, caregivers, educators, and changemakers who want to bring emotional wellbeing into their communities with confidence and care.
               </p>
               <a
-                href="/#enquiry"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
               >
                 Enquire Now
@@ -149,29 +149,6 @@ function AcademyPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-16 text-center shadow-card sm:px-12">
-            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-light/30 via-transparent to-coral-light/20" />
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
-              Begin Your Academy Journey
-            </h2>
-            <p className="mx-auto max-w-xl text-lg leading-relaxed text-muted-foreground text-balance mb-10">
-              Whether you are a caregiver, educator, healer, or changemaker — there is a pathway for you here.
-            </p>
-            <a
-              href="/#enquiry"
-              className="inline-flex items-center justify-center rounded-xl bg-primary px-10 py-4 text-lg font-bold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
-            >
-              Enquire Now
-              <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
