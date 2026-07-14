@@ -384,30 +384,6 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Enquiry / Google Form Section */}
-      <section id="enquiry" className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              Contact Us
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              Have questions about our programs, want to partner, or volunteer? We'd love to hear from you.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-card">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSf-example/viewform?embedded=true"
-              width="100%"
-              height="700"
-              title="Contact Form"
-              className="border-0"
-            >
-              Loading…
-            </iframe>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
