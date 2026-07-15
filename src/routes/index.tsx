@@ -357,13 +357,7 @@ function LandingPage() {
                 Your donation helps make preventive emotional care accessible to those who need it most. Every contribution supports elderly care, school emotional well-being programs, and compassionate care for cancer warriors and their families.
               </p>
               <div className="mt-10 flex flex-col items-center gap-4">
-                <div className="flex flex-wrap justify-center gap-3">
-                  <DonationAmount amount="₹500" />
-                  <DonationAmount amount="₹1,000" />
-                  <DonationAmount amount="₹2,500" />
-                  <DonationAmount amount="₹5,000" />
-                  <DonationAmount amount="Other" />
-                </div>
+                
                 <a
                   href="https://razorpay.me/@SOUNDNMINDFOUNDATION"
                   className="mt-4 inline-flex items-center justify-center rounded-xl bg-primary px-10 py-4 text-lg font-bold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
