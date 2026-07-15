@@ -62,11 +62,9 @@ function ContactPage() {
             We are here for you
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
-            Contact
+            Let’s Connect
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl text-balance">
-            Whether you are exploring partnership, training, volunteering, or simply want to learn more about our work, we would love to hear from you.
-          </p>
+
         </div>
       </section>
 
