@@ -365,9 +365,7 @@ function LandingPage() {
                   <DonationAmount amount="Other" />
                 </div>
                 <a
-                  href="https://razorpay.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://razorpay.me/@SOUNDNMINDFOUNDATION"
                   className="mt-4 inline-flex items-center justify-center rounded-xl bg-primary px-10 py-4 text-lg font-bold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
                 >
                   Donate Securely via Razorpay
