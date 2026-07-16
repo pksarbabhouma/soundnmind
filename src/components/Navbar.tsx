@@ -7,7 +7,6 @@ type MenuItem = {
 };
 
 function getMenu(variant: "home" | "page"): MenuItem[] {
-  const prefix = variant === "home" ? "#" : "/#";
   const homeHref = variant === "home" ? "#home" : "/";
   return [
     { label: "Home", href: homeHref },
@@ -22,7 +21,7 @@ function getMenu(variant: "home" | "page"): MenuItem[] {
         { label: "Cancer Warriors & Caregivers", href: "/our-work#cancer-warriors" },
       ],
     },
-    { label: "Stories & Impact", href: `${prefix}videos` },
+    { label: "Gallery", href: "/gallery" },
     {
       label: "Get Involved",
       href: "/get-involved",
