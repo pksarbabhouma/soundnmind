@@ -17,9 +17,9 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">Our Work</h3>
             <ul className="space-y-3 text-sm text-white/70">
-              <li><a href="/#senior-care" className="hover:text-white transition-colors">Senior & Dementia Care</a></li>
-              <li><a href="/#schools" className="hover:text-white transition-colors">Schools</a></li>
-              <li><a href="/#cancer-warriors" className="hover:text-white transition-colors">Cancer Warriors & Caregivers</a></li>
+              <li><a href="/our-work#senior-care" className="hover:text-white transition-colors">Senior & Dementia Care</a></li>
+              <li><a href="/our-work#schools" className="hover:text-white transition-colors">Schools</a></li>
+              <li><a href="/our-work#cancer-warriors" className="hover:text-white transition-colors">Cancer Warriors & Caregivers</a></li>
               <li><a href="/academy" className="hover:text-white transition-colors">Academy</a></li>
             </ul>
           </div>
