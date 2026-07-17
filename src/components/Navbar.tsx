@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logoAsset from "@/assets/sound-n-mind-logo.jpg.asset.json";
 
 type MenuItem = {
   label: string;
