@@ -1,3 +1,5 @@
+import logoAsset from "@/assets/sound-n-mind-logo.jpg.asset.json";
+
 export function Footer() {
   return (
     <footer className="px-4 py-16 sm:px-6 lg:px-8 bg-navy text-white">
