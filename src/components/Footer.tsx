@@ -7,10 +7,7 @@ export function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground text-lg font-bold">
-                S
-              </div>
-              <span className="text-lg font-semibold">Sound N Mind</span>
+              <img src={logoAsset.url} alt="Sound N Mind Foundation" className="h-10 w-auto bg-white rounded-md p-1" />
             </div>
             <p className="text-sm leading-relaxed text-white/70">
               Creating emotionally resilient individuals and compassionate communities across India.
