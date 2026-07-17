@@ -50,9 +50,9 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">Follow Us</h3>
             <div className="flex gap-3">
               <a href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">𝕏</a>
-              <a href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">f</a>
+              <a href="https://www.facebook.com/SoundNMindFoundation" target="_blank" rel="noopener noreferrer" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">f</a>
               <a href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">📷</a>
-              <a href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">▶️</a>
+              <a href="https://www.linkedin.com/company/soundnmindfoundation/" target="_blank" rel="noopener noreferrer" className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-lg">in</a>
             </div>
           </div>
         </div>
