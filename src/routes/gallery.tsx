@@ -32,10 +32,11 @@ const PHOTOS: { src: string; alt: string }[] = [
 
 // Easy-to-replace placeholder YouTube video IDs
 const VIDEOS: { id: string; title: string; description: string }[] = [
-  { id: "dQw4w9WgXcQ", title: "Emotional Wellbeing Talk", description: "A conversation on building emotional resilience in everyday life." },
-  { id: "dQw4w9WgXcQ", title: "Mindfulness Workshop", description: "Guided practices from our community mindfulness sessions." },
-  { id: "dQw4w9WgXcQ", title: "Sound Healing Session", description: "Immersive sound experiences for calm and clarity." },
-  { id: "dQw4w9WgXcQ", title: "Community Outreach", description: "Highlights from our on-ground initiatives with seniors and caregivers." },
+  {
+    id: "DpYyZSu3stI",
+    title: "Mindwell Club || Students First Exposure to Emotional Literacy and Life Skills || Coping Skills",
+    description: "Students experience their first exposure to emotional literacy, life skills, and coping strategies through the Mindwell Club.",
+  },
 ];
 
 function GalleryPage() {
