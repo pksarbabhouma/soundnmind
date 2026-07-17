@@ -28,16 +28,22 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2">
                 <span>📍</span>
-                <span>42, Lotus Enclave, Andheri East, Mumbai — 400069</span>
+                <span>
+                  5/A, Second Lane,<br />
+                  beside Adabasi Kalyan Sanga,<br />
+                  Anandapur, Mundapara,<br />
+                  Kolkata, West Bengal, 700107
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span>📞</span>
-                <span>+91 98765 43210</span>
+                <a href="tel:+919330158041" className="hover:text-white transition-colors">9330158041</a>
               </li>
               <li className="flex items-start gap-2">
                 <span>✉️</span>
-                <span>hello@soundnmind.org</span>
+                <a href="mailto:soundnmindfoundation@gmail.com" className="hover:text-white transition-colors break-all">soundnmindfoundation@gmail.com</a>
               </li>
+
             </ul>
           </div>
           <div>
