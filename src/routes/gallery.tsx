@@ -134,10 +134,24 @@ function GalleryPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-foreground">{video.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{video.description}</p>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Explore More Videos</h3>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+              Visit our YouTube channel to discover more talks, workshops, interviews, and emotional well-being resources.
+            </p>
+            <a
+              href="https://youtube.com/@soundnmindfoundation?si=DXYLui8cP4o3lbJ9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:opacity-90 hover:shadow-lg"
+            >
+              Visit Our YouTube Channel
+            </a>
           </div>
         </div>
       </section>
