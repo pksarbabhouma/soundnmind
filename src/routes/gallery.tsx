@@ -31,12 +31,11 @@ const PHOTOS: { src: string; alt: string }[] = [
 ];
 
 // Easy-to-replace placeholder YouTube video IDs
-const VIDEOS: { id: string; title: string; description: string }[] = [
-  {
-    id: "DpYyZSu3stI",
-    title: "Mindwell Club || Students First Exposure to Emotional Literacy and Life Skills || Coping Skills",
-    description: "Students experience their first exposure to emotional literacy, life skills, and coping strategies through the Mindwell Club.",
-  },
+const VIDEOS: { id: string; title: string }[] = [
+  { id: "Bh7MiaeDubk", title: "Sound 'N' Mind Foundation - The Journey" },
+  { id: "nOPCBNOB1aU", title: "WORKSHOP ON MANAGING STRESS THROUGH MINDFULNESS" },
+  { id: "uTMHh5V8bs0", title: "Share Your Story!! Share Your Experience!! Mental Health Awareness Month!! #iknowmyemotions" },
+  { id: "-MS-8_ZSygg", title: "Course Introduction" },
 ];
 
 function GalleryPage() {
@@ -135,10 +134,24 @@ function GalleryPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-foreground">{video.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{video.description}</p>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Explore More Videos</h3>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+              Visit our YouTube channel to discover more talks, workshops, interviews, and emotional well-being resources.
+            </p>
+            <a
+              href="https://youtube.com/@soundnmindfoundation?si=DXYLui8cP4o3lbJ9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:opacity-90 hover:shadow-lg"
+            >
+              Visit Our YouTube Channel
+            </a>
           </div>
         </div>
       </section>
