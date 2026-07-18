@@ -29,7 +29,7 @@ export function Footer() {
                 <span>📍</span>
                 <span>
                   5/A, Second Lane,<br />
-                  beside Adabasi Kalyan Sanga,<br />
+                  Beside Adabasi Kalyan Sangha,<br />
                   Anandapur, Mundapara,<br />
                   Kolkata, West Bengal, 700107
                 </span>
