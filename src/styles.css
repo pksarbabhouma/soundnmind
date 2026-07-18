@@ -133,15 +133,15 @@
 }
 
 @utility gradient-teal {
-  background: linear-gradient(135deg, var(--teal) 0%, oklch(0.6 0.14 170) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--teal) 100%);
 }
 
 @utility gradient-coral {
-  background: linear-gradient(135deg, var(--coral) 0%, oklch(0.55 0.18 40) 100%);
+  background: linear-gradient(135deg, var(--coral) 0%, #d94f95 100%);
 }
 
 @utility shadow-cta {
-  box-shadow: 0 10px 40px -10px oklch(0.55 0.12 175 / 0.4);
+  box-shadow: 0 10px 40px -10px rgb(44 110 159 / 0.4);
 }
 
 @utility shadow-card {
