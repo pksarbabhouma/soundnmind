@@ -46,7 +46,7 @@ export function Navbar({ variant }: { variant: "home" | "page" }) {
     <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a href="/" className="flex items-center gap-2">
-          <img src={logoAsset.url} alt="Sound N Mind Foundation" className="h-9 w-auto" />
+          <img src={logoAsset.url} alt="Sound N Mind Foundation" className="h-10 w-auto sm:h-11" />
         </a>
 
         {/* Desktop menu */}

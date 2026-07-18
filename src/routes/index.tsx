@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
+import { CountUp } from "@/components/CountUp";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -80,7 +82,7 @@ function LandingPage() {
                   <div className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-teal-light text-2xl">
                     {m.icon}
                   </div>
-                  <div className="text-3xl font-extrabold text-foreground sm:text-4xl">{m.value}</div>
+                  <div className="text-3xl font-extrabold text-foreground sm:text-4xl"><CountUp value={m.value} /></div>
                   <div className="mt-2 text-sm font-medium text-muted-foreground">{m.label}</div>
                 </div>
               ))}
