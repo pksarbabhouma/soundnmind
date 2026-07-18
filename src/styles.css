@@ -49,36 +49,37 @@
 :root {
   --radius: 0.625rem;
 
-  /* Warm, empathetic palette for healthcare NGO */
-  --background: oklch(0.985 0.005 85);
-  --foreground: oklch(0.2 0.02 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.02 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.02 260);
-  --primary: oklch(0.55 0.12 175);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.96 0.01 85);
-  --secondary-foreground: oklch(0.25 0.02 260);
-  --muted: oklch(0.94 0.005 85);
-  --muted-foreground: oklch(0.5 0.02 260);
-  --accent: oklch(0.65 0.14 30);
-  --accent-foreground: oklch(1 0 0);
+  /* Sound 'N' Mind Foundation brand palette */
+  --background: #FAFBFC;
+  --foreground: #222222;
+  --card: #FFFFFF;
+  --card-foreground: #222222;
+  --popover: #FFFFFF;
+  --popover-foreground: #222222;
+  --primary: #2C6E9F;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3F8FC;
+  --secondary-foreground: #222222;
+  --muted: #F3F8FC;
+  --muted-foreground: #555555;
+  --accent: #3CB8B0;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.58 0.22 25);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.9 0.01 85);
-  --input: oklch(0.9 0.01 85);
-  --ring: oklch(0.55 0.12 175);
+  --destructive-foreground: #FFFFFF;
+  --border: #E1EAF2;
+  --input: #E1EAF2;
+  --ring: #2C6E9F;
 
-  /* Extended palette */
-  --teal: oklch(0.55 0.12 175);
-  --teal-light: oklch(0.92 0.04 175);
-  --coral: oklch(0.62 0.16 45);
-  --coral-light: oklch(0.95 0.03 45);
-  --sand: oklch(0.96 0.01 85);
-  --sand-dark: oklch(0.88 0.02 85);
-  --navy: oklch(0.25 0.04 260);
+  /* Extended brand tokens (names kept for compatibility) */
+  --teal: #3CB8B0;
+  --teal-light: #E0F4F2;
+  --coral: #E66BAA;
+  --coral-light: #FCE4EF;
+  --sand: #F3F8FC;
+  --sand-dark: #E1EAF2;
+  --navy: #2C6E9F;
 }
+
 
 .dark {
   --background: oklch(0.15 0.02 260);
