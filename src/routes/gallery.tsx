@@ -31,12 +31,11 @@ const PHOTOS: { src: string; alt: string }[] = [
 ];
 
 // Easy-to-replace placeholder YouTube video IDs
-const VIDEOS: { id: string; title: string; description: string }[] = [
-  {
-    id: "DpYyZSu3stI",
-    title: "Mindwell Club || Students First Exposure to Emotional Literacy and Life Skills || Coping Skills",
-    description: "Students experience their first exposure to emotional literacy, life skills, and coping strategies through the Mindwell Club.",
-  },
+const VIDEOS: { id: string; title: string }[] = [
+  { id: "Bh7MiaeDubk", title: "Sound 'N' Mind Foundation - The Journey" },
+  { id: "nOPCBNOB1aU", title: "WORKSHOP ON MANAGING STRESS THROUGH MINDFULNESS" },
+  { id: "uTMHh5V8bs0", title: "Share Your Story!! Share Your Experience!! Mental Health Awareness Month!! #iknowmyemotions" },
+  { id: "-MS-8_ZSygg", title: "Course Introduction" },
 ];
 
 function GalleryPage() {
