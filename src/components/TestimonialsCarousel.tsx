@@ -1,5 +1,15 @@
 import { useEffect, useState } from "react";
-import { Quote } from "lucide-react";
+import {
+  Quote,
+  Ribbon,
+  Users,
+  GraduationCap,
+  Heart,
+  School,
+  Brain,
+  Handshake,
+  type LucideIcon,
+} from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -9,30 +19,62 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-const testimonials = [
+type Testimonial = {
+  category: string;
+  icon: LucideIcon;
+  quote: string;
+  attribution: string;
+};
+
+const testimonials: Testimonial[] = [
   {
-    category: "Seniors & Caregivers",
+    category: "Cancer Warrior",
+    icon: Ribbon,
     quote:
-      "The emotional companionship sessions brought comfort, confidence, and meaningful connection to our family during a difficult time.",
-    name: "Placeholder Name",
+      "For the first time since my diagnosis, I felt that someone truly understood what I was going through emotionally. The mindfulness and relaxation sessions helped me sleep better, manage my anxiety, and face each treatment with renewed hope. Sound 'N' Mind reminded me that healing is not only physical—it is emotional too.",
+    attribution: "Cancer Warrior, Kolkata",
   },
   {
-    category: "Students & Teachers",
+    category: "Cancer Caregiver",
+    icon: Users,
     quote:
-      "Our students became more mindful, emotionally aware, and supportive of one another through the MindWell Club.",
-    name: "Placeholder Name",
+      "As parents, we focused so much on our child's treatment that we forgot to care for ourselves. The emotional wellbeing sessions gave us a safe space to breathe, share our fears, and regain our strength. We became calmer caregivers, and our child noticed the difference too.",
+    attribution: "Parent of a Child Undergoing Cancer Treatment",
   },
   {
-    category: "Cancer Caregivers",
+    category: "Schools & Emotional Literacy",
+    icon: School,
     quote:
-      "Having a safe space to share emotions and receive compassionate support made an incredible difference in our journey.",
-    name: "Placeholder Name",
+      "MindWell Club has transformed the conversation around emotional wellbeing in our school. Students are more open about their emotions, teachers feel better equipped to support them, and parents appreciate that emotional literacy is becoming part of education.",
+    attribution: "Principal, Partner School",
   },
   {
-    category: "Program Facilitators",
+    category: "Emotional Wellbeing",
+    icon: Heart,
     quote:
-      "The training empowered me with practical skills and confidence to support emotional well-being within my community.",
-    name: "Placeholder Name",
+      "Sometimes what we need most is someone who truly listens without judging. The emotional companionship sessions gave me that space. I found clarity, emotional balance, and the confidence to move forward.",
+    attribution: "Emotional Wellbeing Participant",
+  },
+  {
+    category: "Academy Graduate",
+    icon: GraduationCap,
+    quote:
+      "This training changed the way I listen to people. I now understand that genuine presence and empathy can be as powerful as advice. The course has transformed both my professional and personal relationships.",
+    attribution: "Certified Emotional Companion",
+  },
+  {
+    category: "Dementia Care",
+    icon: Brain,
+    quote:
+      "The dementia caregiver training gave me both knowledge and confidence. The practical demonstrations and compassionate approach made the learning experience truly meaningful.",
+    attribution: "Dementia Care Training Participant",
+  },
+  {
+    category: "Partner Organization",
+    icon: Handshake,
+    quote:
+      "The consistent support provided through mindfulness, emotional wellbeing sessions, and guided relaxation has positively impacted the emotional resilience of the families we serve. We value this partnership immensely.",
+    attribution: "AGM, Premashraya",
   },
 ];
 
@@ -69,46 +111,42 @@ export function TestimonialsCarousel() {
         className="w-full"
       >
         <CarouselContent className="-ml-4">
-          {testimonials.map((t, i) => (
-            <CarouselItem
-              key={i}
-              className="pl-4 md:basis-1/2 lg:basis-1/3"
-            >
-              <div className="h-full rounded-2xl border border-border bg-card p-8 shadow-card transition-all hover:shadow-lg flex flex-col animate-fade-in">
-                <span className="self-start inline-flex items-center rounded-full bg-teal-light px-3 py-1 text-xs font-medium text-foreground mb-5">
-                  {t.category}
-                </span>
-                <Quote
-                  className="text-primary/40 mb-3"
-                  size={28}
-                  aria-hidden="true"
-                />
-                <p className="text-base leading-relaxed text-muted-foreground text-balance flex-1">
-                  “{t.quote}”
-                </p>
-                <div className="mt-6 flex items-center gap-3 pt-6 border-t border-border">
-                  <div
-                    className="h-11 w-11 rounded-full bg-gradient-to-br from-teal-light to-coral-light flex items-center justify-center text-sm font-semibold text-foreground/70"
-                    aria-hidden="true"
-                  >
-                    {t.name
-                      .split(" ")
-                      .map((s) => s[0])
-                      .join("")
-                      .slice(0, 2)}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">
-                      {t.name}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
+          {testimonials.map((t, i) => {
+            const Icon = t.icon;
+            return (
+              <CarouselItem
+                key={i}
+                className="pl-4 md:basis-1/2 lg:basis-1/3"
+              >
+                <div className="h-full rounded-2xl border border-border bg-card p-8 shadow-card transition-all hover:shadow-lg flex flex-col animate-fade-in">
+                  <div className="flex items-center gap-2 mb-5">
+                    <span className="inline-flex items-center rounded-full bg-teal-light px-3 py-1 text-xs font-medium text-foreground">
                       {t.category}
+                    </span>
+                    <span
+                      className="inline-flex items-center justify-center h-7 w-7 rounded-full bg-primary/10 text-primary"
+                      aria-hidden="true"
+                    >
+                      <Icon size={16} />
+                    </span>
+                  </div>
+                  <Quote
+                    className="text-primary/40 mb-3"
+                    size={28}
+                    aria-hidden="true"
+                  />
+                  <p className="text-base leading-relaxed text-muted-foreground text-balance flex-1">
+                    “{t.quote}”
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-border">
+                    <p className="text-sm font-semibold text-foreground">
+                      {t.attribution}
                     </p>
                   </div>
                 </div>
-              </div>
-            </CarouselItem>
-          ))}
+              </CarouselItem>
+            );
+          })}
         </CarouselContent>
         <CarouselPrevious className="hidden sm:flex -left-4 lg:-left-12" />
         <CarouselNext className="hidden sm:flex -right-4 lg:-right-12" />
