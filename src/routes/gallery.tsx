@@ -111,7 +111,7 @@ function GalleryPage() {
               Discover more photographs from our community programs, workshops, outreach initiatives, and events.
             </p>
             <a
-              href="#"
+              href="https://photos.app.goo.gl/Vm2NcXLGqCbut5bq6"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:opacity-90 hover:shadow-lg"
