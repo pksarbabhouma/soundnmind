@@ -314,12 +314,9 @@ function LandingPage() {
 
           {([
               {
-                name: "CSR Partners",
-                logos: [{ name: "Premashraya", src: premashrayaLogo.url }],
-              },
-              {
                 name: "NGOs",
                 logos: [
+                  { name: "Premashraya", src: premashrayaLogo.url },
                   { name: "St. Jude India ChildCare Centres", src: stJudeLogo.url },
                   { name: "CanKids...KidsCan", src: cankidsLogo.url },
                   { name: "Dementia India Alliance", src: diaLogo.url },
