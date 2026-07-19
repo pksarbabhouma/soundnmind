@@ -338,7 +338,7 @@ function LandingPage() {
                 {category.logos.map((logo, i) => (
                   <div
                     key={logo.name}
-                    className="flex h-24 items-center justify-center rounded-xl border border-border bg-background px-4 py-3 shadow-card grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-105 animate-fade-in"
+                    className="flex h-24 items-center justify-center rounded-xl border border-border bg-background px-4 py-3 shadow-card transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-lg animate-fade-in"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
                     <img
@@ -358,37 +358,35 @@ function LandingPage() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground text-center mb-8">
               Schools
             </h3>
-            <div className="rounded-2xl border border-border bg-background p-8 shadow-card animate-fade-in">
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-teal-light text-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                  </svg>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                "Aditya Academy",
+                "Alipore Girls and Boys",
+                "B.E. College Model School",
+                "BAS",
+                "Beleghata Desabandhu Girls High School",
+                "DBV",
+                "De Paul School",
+                "Jodhpur Girls",
+                "Mohispota Girls",
+                "Santoshpur Rishi Aurobindo Balike Vidyapith",
+                "Silver Point School",
+                "ZMLS",
+              ].map((school, i) => (
+                <div
+                  key={school}
+                  className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 min-h-16 shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-[1.03] hover:shadow-lg animate-fade-in"
+                  style={{ animationDelay: `${i * 60}ms`, animationFillMode: "both" }}
+                >
+                  <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-light text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                      <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium text-foreground leading-snug">{school}</span>
                 </div>
-                <h4 className="text-xl font-bold text-foreground">Schools We Work With</h4>
-              </div>
-              <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
-                {[
-                  "Aditya Academy",
-                  "Alipore Girls and Boys",
-                  "B.E. College Model School",
-                  "BAS",
-                  "Beleghata Desabandhu Girls High School",
-                  "DBV",
-                  "De Paul School",
-                  "Jodhpur Girls",
-                  "Mohispota Girls",
-                  "Santoshpur Rishi Aurobindo Balike Vidyapith",
-                  "Silver Point School",
-                  "ZMLS",
-                ].map((school) => (
-                  <li key={school} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span>{school}</span>
-                  </li>
-                ))}
-              </ul>
+              ))}
             </div>
           </div>
 
