@@ -3,6 +3,11 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { CountUp } from "@/components/CountUp";
+import premashrayaLogo from "@/assets/partners/premashraya.png.asset.json";
+import stJudeLogo from "@/assets/partners/st-jude.png.asset.json";
+import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
+import diaLogo from "@/assets/partners/dia.png.asset.json";
+import ichLogo from "@/assets/partners/ich.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
