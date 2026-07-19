@@ -104,6 +104,21 @@ function GalleryPage() {
               </button>
             ))}
           </div>
+
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Explore More Moments</h3>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+              Discover more photographs from our community programs, workshops, outreach initiatives, and events.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:opacity-90 hover:shadow-lg"
+            >
+              View Complete Gallery
+            </a>
+          </div>
         </div>
       </section>
 
