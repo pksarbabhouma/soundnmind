@@ -248,10 +248,10 @@ function ContactPage() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
               <a
-                href="mailto:hello@soundnmind.org"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                href="mailto:soundnmindfoundation@gmail.com"
+                className="text-muted-foreground hover:text-primary transition-colors break-all"
               >
-                hello@soundnmind.org
+                soundnmindfoundation@gmail.com
               </a>
             </div>
             <div className="rounded-2xl border border-border bg-card p-8 text-center shadow-card transition-all hover:shadow-lg hover:-translate-y-1">
@@ -260,10 +260,10 @@ function ContactPage() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Phone</h3>
               <a
-                href="tel:+919876543210"
+                href="tel:+919330158041"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                +91 98765 43210
+                +91 9330158041
               </a>
             </div>
             <div className="rounded-2xl border border-border bg-card p-8 text-center shadow-card transition-all hover:shadow-lg hover:-translate-y-1">
@@ -272,7 +272,10 @@ function ContactPage() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Address</h3>
               <p className="text-muted-foreground">
-                42, Lotus Enclave, Andheri East, Mumbai — 400069
+                5/A, Second Lane,<br />
+                Beside Adabasi Kalyan Sangha,<br />
+                Anandapur, Mundapara,<br />
+                Kolkata, West Bengal, 700107
               </p>
             </div>
           </div>
