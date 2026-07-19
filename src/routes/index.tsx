@@ -3,6 +3,11 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { CountUp } from "@/components/CountUp";
+import premashrayaLogo from "@/assets/partners/premashraya.png.asset.json";
+import stJudeLogo from "@/assets/partners/st-jude.png.asset.json";
+import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
+import diaLogo from "@/assets/partners/dia.png.asset.json";
+import ichLogo from "@/assets/partners/ich.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -307,13 +312,24 @@ function LandingPage() {
             </p>
           </div>
 
-          {[
-            { name: "Schools", logos: ["Vidya Academy", "Bright Minds School", "Harmony High"] },
-            { name: "Hospitals", logos: ["CareWell Hospital", "Serenity Medical", "Wellness Clinic"] },
-            { name: "NGOs", logos: ["Dementia India Alliance", "Hope Foundation", "Compassion Trust"] },
-            { name: "CSR Partners", logos: ["Aurora Corp", "Lumen Industries", "NorthStar Group"] },
-            { name: "Service Organizations", logos: ["Rotary Club", "Lions International", "Round Table"] },
-          ].map((category, cIdx) => (
+          {([
+              {
+                name: "CSR Partners",
+                logos: [{ name: "Premashraya", src: premashrayaLogo.url }],
+              },
+              {
+                name: "NGOs",
+                logos: [
+                  { name: "St. Jude India ChildCare Centres", src: stJudeLogo.url },
+                  { name: "CanKids...KidsCan", src: cankidsLogo.url },
+                  { name: "Dementia India Alliance", src: diaLogo.url },
+                ],
+              },
+              {
+                name: "Hospitals",
+                logos: [{ name: "Institute of Child Health", src: ichLogo.url }],
+              },
+            ] as { name: string; logos: { name: string; src: string }[] }[]).map((category, cIdx) => (
             <div key={category.name} className={cIdx === 0 ? "" : "mt-14"}>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground text-center mb-8">
                 {category.name}
@@ -321,18 +337,60 @@ function LandingPage() {
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
                 {category.logos.map((logo, i) => (
                   <div
-                    key={logo}
+                    key={logo.name}
                     className="flex h-24 items-center justify-center rounded-xl border border-border bg-background px-4 py-3 shadow-card grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-105 animate-fade-in"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
-                    <span className="text-sm font-semibold text-foreground/70 text-center leading-tight">
-                      {logo}
-                    </span>
+                    <img
+                      src={logo.src}
+                      alt={`${logo.name} logo`}
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                 ))}
               </div>
             </div>
           ))}
+
+          {/* Schools */}
+          <div className="mt-14">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground text-center mb-8">
+              Schools
+            </h3>
+            <div className="rounded-2xl border border-border bg-background p-8 shadow-card animate-fade-in">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-teal-light text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-bold text-foreground">Schools We Work With</h4>
+              </div>
+              <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
+                {[
+                  "Aditya Academy",
+                  "Alipore Girls and Boys",
+                  "B.E. College Model School",
+                  "BAS",
+                  "Beleghata Desabandhu Girls High School",
+                  "DBV",
+                  "De Paul School",
+                  "Jodhpur Girls",
+                  "Mohispota Girls",
+                  "Santoshpur Rishi Aurobindo Balike Vidyapith",
+                  "Silver Point School",
+                  "ZMLS",
+                ].map((school) => (
+                  <li key={school} className="flex items-start gap-2 text-sm text-foreground/80">
+                    <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    <span>{school}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
           <p className="mt-14 text-center text-sm text-muted-foreground max-w-2xl mx-auto text-balance">
             We proudly collaborate with organizations dedicated to emotional well-being, education, healthcare, and community impact.
