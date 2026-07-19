@@ -3,6 +3,11 @@ import { useEffect, useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { X } from "lucide-react";
+import photo1 from "@/assets/gallery/mindwell.jpg.asset.json";
+import photo2 from "@/assets/gallery/mindwell_1.jpg.asset.json";
+import photo3 from "@/assets/gallery/sound-healing.jpg.asset.json";
+import photo4 from "@/assets/gallery/cancer-warrior.jpg.asset.json";
+import photo5 from "@/assets/gallery/mindfulness.jpg.asset.json";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -18,16 +23,12 @@ export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
 });
 
-// Easy-to-replace placeholder images (Unsplash)
 const PHOTOS: { src: string; alt: string }[] = [
-  { src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80", alt: "Community workshop" },
-  { src: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?auto=format&fit=crop&w=1200&q=80", alt: "Group learning session" },
-  { src: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=1200&q=80", alt: "Senior care program" },
-  { src: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80", alt: "Sound healing session" },
-  { src: "https://images.unsplash.com/photo-1522543558187-768b6df7c25c?auto=format&fit=crop&w=1200&q=80", alt: "Mindfulness training" },
-  { src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80", alt: "Outreach initiative" },
-  { src: "https://images.unsplash.com/photo-1526976668912-1a811878dd37?auto=format&fit=crop&w=1200&q=80", alt: "Children program" },
-  { src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80", alt: "Community gathering" },
+  { src: photo1.url, alt: "MindWell Club school assembly — emotional literacy session with students" },
+  { src: photo2.url, alt: "Interactive classroom workshop with school students" },
+  { src: photo3.url, alt: "Sound-based healing session with a young cancer warrior" },
+  { src: photo4.url, alt: "Pediatric cancer warrior in hospital ward" },
+  { src: photo5.url, alt: "Group mindfulness and sound healing session for adults" },
 ];
 
 // Easy-to-replace placeholder YouTube video IDs
