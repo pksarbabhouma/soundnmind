@@ -8,6 +8,7 @@ import stJudeLogo from "@/assets/partners/st-jude.png.asset.json";
 import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
 import diaLogo from "@/assets/partners/dia.png.asset.json";
 import ichLogo from "@/assets/partners/ich.png.asset.json";
+import elmaLogo from "@/assets/partners/elma.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -321,6 +322,10 @@ function LandingPage() {
                   { name: "CanKids...KidsCan", src: cankidsLogo.url },
                   { name: "Dementia India Alliance", src: diaLogo.url },
                 ],
+              },
+              {
+                name: "Collaborators",
+                logos: [{ name: "ELMA - The Emotional Literacy & Mindfulness Academy", src: elmaLogo.url }],
               },
               {
                 name: "Hospitals",
