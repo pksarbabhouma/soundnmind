@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { useState } from "react";
 import { Mail, Phone, MapPin, MessageCircle, Send, Heart, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
@@ -28,23 +27,7 @@ const SOCIAL_LINKS = [
 ];
 
 function ContactPage() {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormState((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Placeholder: Google Form integration not configured yet.
-    setSubmitted(true);
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -118,110 +101,17 @@ function ContactPage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-border bg-background p-6 sm:p-10 shadow-card">
-            {submitted ? (
-              <div className="text-center py-12">
-                <div className="mx-auto mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-teal-light text-teal">
-                  <Heart className="h-8 w-8" strokeWidth={2} />
-                </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-3">
-                  Thank you for reaching out
-                </h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  We have received your message and will be in touch soon. In the meantime, feel free to explore our work or academy.
-                </p>
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a
-                    href="/our-work"
-                    className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-3 text-base font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
-                  >
-                    Explore Our Work
-                  </a>
-                  <a
-                    href="/academy"
-                    className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-3 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
-                  >
-                    Explore Academy
-                  </a>
-                </div>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-foreground">
-                      Name
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formState.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-foreground">
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formState.email}
-                      onChange={handleChange}
-                      placeholder="you@example.com"
-                      className="w-full rounded-xl border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium text-foreground">
-                    Phone Number
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formState.phone}
-                    onChange={handleChange}
-                    placeholder="+91 98765 43210"
-                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-foreground">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={formState.message}
-                    onChange={handleChange}
-                    placeholder="Tell us how we can support you..."
-                    className="w-full rounded-xl border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all resize-none"
-                  />
-                </div>
-                <div className="rounded-xl border border-dashed border-border bg-muted/50 p-4 text-center">
-                  <p className="text-sm text-muted-foreground">
-                    Google Form integration placeholder — this form will be connected to our enquiry system soon.
-                  </p>
-                </div>
-                <button
-                  type="submit"
-                  className="inline-flex w-full items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-[1.02] hover:bg-primary/90 sm:w-auto"
-                >
-                  Start a Conversation
-                  <Send className="ml-2 h-5 w-5" />
-                </button>
-              </form>
-            )}
+          <div className="mx-auto w-full max-w-[800px] rounded-2xl border border-border bg-background p-2 sm:p-4 shadow-card">
+            <div className="relative w-full overflow-hidden rounded-xl" style={{ height: "1007px" }}>
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdDleVnrE4SJmibiE3eN2_rFrs-I_LG5yh1i_-7oxa8BQYcUw/viewform?embedded=true"
+                title="Sound 'N' Mind Foundation Enquiry Form"
+                className="h-full w-full border-0"
+                loading="lazy"
+              >
+                Loading…
+              </iframe>
+            </div>
           </div>
         </div>
       </section>
