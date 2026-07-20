@@ -1,4 +1,6 @@
 import logoAsset from "@/assets/sound-n-mind-logo.jpg.asset.json";
+import { SocialLinks } from "@/components/SocialLinks";
+
 
 export function Footer() {
   return (
