@@ -27,23 +27,7 @@ const SOCIAL_LINKS = [
 ];
 
 function ContactPage() {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormState((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Placeholder: Google Form integration not configured yet.
-    setSubmitted(true);
-  };
 
   return (
     <div className="min-h-screen bg-background">
