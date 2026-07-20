@@ -19,12 +19,6 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const SOCIAL_LINKS = [
-  { label: "X (Twitter)", href: "#", icon: "𝕏" },
-  { label: "Facebook", href: "#", icon: "f" },
-  { label: "Instagram", href: "#", icon: "📷" },
-  { label: "YouTube", href: "#", icon: "▶️" },
-];
 
 function ContactPage() {
 
