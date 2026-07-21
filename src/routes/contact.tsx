@@ -38,7 +38,7 @@ function ContactPage() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-6">
             <Heart className="h-4 w-4" />
-            We are here for you
+            Let's Connect
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
             Let’s Connect
