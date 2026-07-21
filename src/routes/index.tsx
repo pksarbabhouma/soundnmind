@@ -35,29 +35,33 @@ function LandingPage() {
       <Navbar variant="home" />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-4 pt-16 pb-20 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-teal-light/40 blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 h-[400px] w-[600px] rounded-full bg-coral-light/30 blur-3xl" />
-        </div>
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
-            {/* Left: text */}
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-8">
-                <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
+      <section className="relative">
+        <div className="relative w-full overflow-hidden min-h-[520px] sm:min-h-[560px] lg:min-h-[600px]">
+          {/* Background image */}
+          <img
+            src={heroImage.url}
+            alt="Group mindfulness and sound healing session — participants gathered in a circle in a moment of collective calm and connection"
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="eager"
+          />
+          {/* Overlays for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+          {/* Text overlay */}
+          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-4 py-20 sm:min-h-[560px] sm:px-6 lg:min-h-[600px] lg:px-8">
+            <div className="max-w-2xl text-white">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm text-white backdrop-blur-sm mb-6">
+                <span className="inline-block h-2 w-2 rounded-full bg-accent animate-pulse" />
                 10,000+ lives touched since 2018
               </div>
-              <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
-                Creating{" "}
-                <span className="text-primary">Emotionally Resilient</span>{" "}
-                Individuals &{" "}
-                <span className="text-accent">Compassionate Communities</span>
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-balance leading-[1.1] drop-shadow-lg">
+                Creating Emotionally Resilient Individuals &amp; Compassionate Communities
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl text-balance mx-auto lg:mx-0">
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl text-balance drop-shadow">
                 Emotional literacy, mindfulness, sound-based healing, and human connection.
               </p>
-              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
                   href="/our-work"
                   className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
@@ -66,29 +70,22 @@ function LandingPage() {
                 </a>
                 <a
                   href="#donate"
-                  className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-white/70 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white hover:text-foreground hover:scale-105"
                 >
                   Donate for Impact
                 </a>
               </div>
             </div>
-
-            {/* Right: image */}
-            <div className="relative order-last lg:order-none">
-              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-teal-light/50 via-transparent to-coral-light/40 blur-2xl" />
-              <div className="relative overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border/50 aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
-                <img
-                  src={heroImage.url}
-                  alt="Group mindfulness and sound healing session — participants gathered in a circle in a moment of collective calm and connection"
-                  className="h-full w-full object-cover"
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent" />
-              </div>
-            </div>
           </div>
+        </div>
 
-          <div className="mt-16">
+        {/* Impact metrics */}
+        <div className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-teal-light/40 blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 h-[400px] w-[600px] rounded-full bg-coral-light/30 blur-3xl" />
+          </div>
+          <div className="mx-auto max-w-7xl">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground">
                 Our Impact
@@ -117,6 +114,7 @@ function LandingPage() {
           </div>
         </div>
       </section>
+
 
       {/* About Section */}
       <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
