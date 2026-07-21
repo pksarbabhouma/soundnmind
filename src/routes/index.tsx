@@ -340,7 +340,7 @@ function LandingPage() {
                 {category.logos.map((logo, i) => (
                   <div
                     key={logo.name}
-                    className="flex h-24 items-center justify-center rounded-xl border border-border bg-background px-4 py-3 shadow-card transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-lg animate-fade-in"
+                    className="flex h-36 items-center justify-center rounded-xl border border-border bg-background px-6 py-4 shadow-card transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-lg animate-fade-in"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
                     <img
