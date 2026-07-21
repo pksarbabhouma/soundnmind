@@ -327,6 +327,9 @@ function LandingPage() {
       <section id="partners" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
+              Collaborating for Change
+            </div>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Partners & Collaborators
             </h2>
