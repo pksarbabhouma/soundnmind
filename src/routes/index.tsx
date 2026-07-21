@@ -220,7 +220,7 @@ function LandingPage() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
-              Programs Snapshot
+              Our Initiatives
             </div>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Programs Snapshot
