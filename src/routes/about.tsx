@@ -47,7 +47,7 @@ function AboutPage() {
         <div className="mx-auto max-w-3xl space-y-20">
           {/* Who We Are */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Who We Are</h2>
+            <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground leading-[1.15] mb-6">Who We Are</h2>
             <p className="text-lg leading-relaxed text-muted-foreground text-balance">
               Sound &rsquo;N&rsquo; Mind Foundation is a not-for-profit organization dedicated to building emotionally resilient individuals and compassionate communities. Our work is preventive, inclusive, secular, and evidence-informed.
             </p>
@@ -55,7 +55,7 @@ function AboutPage() {
 
           {/* Our Vision */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Our Vision</h2>
+            <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground leading-[1.15] mb-6">Our Vision</h2>
             <p className="text-lg leading-relaxed text-muted-foreground text-balance">
               To create emotionally resilient individuals and compassionate communities by integrating emotional literacy, mindfulness, sound-based healing, and human connection across the lifespan.
             </p>
@@ -63,7 +63,7 @@ function AboutPage() {
 
           {/* Our Philosophy */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Our Philosophy</h2>
+            <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground leading-[1.15] mb-6">Our Philosophy</h2>
             <p className="text-lg leading-relaxed text-muted-foreground text-balance">
               Healing does not always require fixing. Sometimes it requires presence, sound, safety, and understanding.
             </p>
@@ -71,7 +71,7 @@ function AboutPage() {
 
           {/* Our Operating Model */}
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-8">Our Operating Model</h2>
+            <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground leading-[1.15] mb-8">Our Operating Model</h2>
             <p className="text-lg leading-relaxed text-muted-foreground text-balance mb-10">
               We function through a dual-engine model:
             </p>
