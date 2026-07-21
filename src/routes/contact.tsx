@@ -56,7 +56,7 @@ function ContactPage() {
                 <Sparkles className="h-4 w-4" />
                 Let’s Connect
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
+              <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
                 Let’s Connect
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground text-balance mb-6">
@@ -89,7 +89,7 @@ function ContactPage() {
               <Send className="h-4 w-4" />
               Start a Conversation
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Start a Conversation
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -120,7 +120,7 @@ function ContactPage() {
               <Mail className="h-4 w-4" />
               Reach Us
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Contact Details
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
