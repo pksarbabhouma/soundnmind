@@ -181,7 +181,7 @@ function LandingPage() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
-              Our Focus Areas
+              How We Create Impact
             </div>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Our Focus Areas
