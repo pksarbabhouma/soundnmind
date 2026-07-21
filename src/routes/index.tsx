@@ -9,6 +9,7 @@ import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
 import diaLogo from "@/assets/partners/dia.png.asset.json";
 import ichLogo from "@/assets/partners/ich.png.asset.json";
 import elmaLogo from "@/assets/partners/elma.png.asset.json";
+import heroImage from "@/assets/gallery/mindfulness.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -39,34 +40,54 @@ function LandingPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-teal-light/40 blur-3xl" />
           <div className="absolute bottom-0 right-1/4 h-[400px] w-[600px] rounded-full bg-coral-light/30 blur-3xl" />
         </div>
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-8">
-            <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
-            10,000+ lives touched since 2018
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+            {/* Left: text */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-8">
+                <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
+                10,000+ lives touched since 2018
+              </div>
+              <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
+                Creating{" "}
+                <span className="text-primary">Emotionally Resilient</span>{" "}
+                Individuals &{" "}
+                <span className="text-accent">Compassionate Communities</span>
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl text-balance mx-auto lg:mx-0">
+                Emotional literacy, mindfulness, sound-based healing, and human connection.
+              </p>
+              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+                <a
+                  href="/our-work"
+                  className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
+                >
+                  Explore Our Work
+                </a>
+                <a
+                  href="#donate"
+                  className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
+                >
+                  Donate for Impact
+                </a>
+              </div>
+            </div>
+
+            {/* Right: image */}
+            <div className="relative order-last lg:order-none">
+              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-teal-light/50 via-transparent to-coral-light/40 blur-2xl" />
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border/50 aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
+                <img
+                  src={heroImage.url}
+                  alt="Group mindfulness and sound healing session — participants gathered in a circle in a moment of collective calm and connection"
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent" />
+              </div>
+            </div>
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
-            Creating{" "}
-            <span className="text-primary">Emotionally Resilient</span>{" "}
-            Individuals &{" "}
-            <span className="text-accent">Compassionate Communities</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl text-balance">
-            Emotional literacy, mindfulness, sound-based healing, and human connection.
-          </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="/our-work"
-              className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
-            >
-              Explore Our Work
-            </a>
-            <a
-              href="#donate"
-              className="inline-flex items-center justify-center rounded-xl border-2 border-border bg-background px-8 py-4 text-base font-semibold text-foreground transition-all hover:bg-muted hover:scale-105"
-            >
-              Donate for Impact
-            </a>
-          </div>
+
           <div className="mt-16">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground">
