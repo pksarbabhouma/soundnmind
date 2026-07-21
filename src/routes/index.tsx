@@ -123,7 +123,7 @@ function LandingPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
               About Sound 'N' Mind
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               About Sound 'N' Mind
             </h2>
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground text-balance">
@@ -183,7 +183,7 @@ function LandingPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
               Our Focus Areas
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Our Focus Areas
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -222,7 +222,7 @@ function LandingPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
               Programs Snapshot
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Programs Snapshot
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -309,7 +309,7 @@ function LandingPage() {
       <section id="testimonials" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Testimonials
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -324,7 +324,7 @@ function LandingPage() {
       <section id="partners" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Partners & Collaborators
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -429,7 +429,7 @@ function LandingPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
                 🙏 100% of donations fund our programs
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+              <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
                 Be Part of a More Emotionally Resilient World
               </h2>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-balance">

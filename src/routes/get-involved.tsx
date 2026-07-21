@@ -73,7 +73,7 @@ function GetInvolvedPage() {
                 <Users className="h-4 w-4" />
                 Collaboration
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
+              <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
                 Partner With Us
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground text-balance mb-8">
@@ -114,7 +114,7 @@ function GetInvolvedPage() {
               <Heart className="h-4 w-4" />
               Give Your Presence
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
               Volunteer / Train
             </h2>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground text-balance">
@@ -168,7 +168,7 @@ function GetInvolvedPage() {
               <Gift className="h-4 w-4" />
               Give
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
+            <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
               Donate
             </h2>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground text-balance">

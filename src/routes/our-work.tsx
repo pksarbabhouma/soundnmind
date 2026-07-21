@@ -70,7 +70,7 @@ function OurWorkPage() {
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Four Foundational Pillars
             </h2>
             <p className="mt-4 text-lg text-muted-foreground text-balance">
@@ -108,7 +108,7 @@ function OurWorkPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
                 Older Adults
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-4">
+              <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-4">
                 Seniors & Dementia Care
               </h2>
               <p className="text-xl font-medium text-primary mb-6">
@@ -224,7 +224,7 @@ function OurWorkPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
                 Education
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-4">
+              <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-4">
                 Schools
               </h2>
               <p className="text-xl font-medium text-primary mb-4">
@@ -252,7 +252,7 @@ function OurWorkPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
                 Cancer Support
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-4">
+              <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-4">
                 Cancer Warriors & Caregivers
               </h2>
               <p className="text-xl font-medium text-primary mb-6">
@@ -296,7 +296,7 @@ function OurWorkPage() {
       {/* CTA */}
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
+          <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
             Want to bring this work to your community?
           </h2>
           <p className="text-lg text-muted-foreground text-balance mb-8">

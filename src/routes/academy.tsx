@@ -84,7 +84,7 @@ function AcademyPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
               Training Streams
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Four Pathways to Practice
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -120,7 +120,7 @@ function AcademyPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
                 How We Train
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance mb-6">
+              <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
                 Training Design
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground text-balance mb-8">

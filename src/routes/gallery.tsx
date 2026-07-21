@@ -80,7 +80,7 @@ function GalleryPage() {
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Photo Gallery</h2>
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground leading-[1.15]">Photo Gallery</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
               Snapshots from our community programs, workshops, training sessions, and outreach initiatives.
             </p>
@@ -126,7 +126,7 @@ function GalleryPage() {
       <section className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-t border-border">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Video Gallery</h2>
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground leading-[1.15]">Video Gallery</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
               Watch our talks, workshops, community activities, and emotional well-being initiatives.
             </p>
