@@ -9,6 +9,7 @@ import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
 import diaLogo from "@/assets/partners/dia.png.asset.json";
 import ichLogo from "@/assets/partners/ich.png.asset.json";
 import elmaLogo from "@/assets/partners/elma.png.asset.json";
+import heroImage from "@/assets/gallery/mindfulness.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
