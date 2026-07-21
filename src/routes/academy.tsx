@@ -66,7 +66,7 @@ function AcademyPage() {
         </div>
         <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-6">
-            🎓 The Academy
+            Learning & Growth
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
             Sound <span className="text-primary">’N’ Mind</span> Academy
