@@ -38,46 +38,17 @@ function ContactPage() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-6">
             <Heart className="h-4 w-4" />
-            Let's Connect
+            Contact
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
+          <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1] mb-6">
             Let’s Connect
           </h1>
-
-        </div>
-      </section>
-
-      {/* Let's Connect */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid items-start gap-12 lg:grid-cols-2">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
-                <Sparkles className="h-4 w-4" />
-                Let’s Connect
-              </div>
-              <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
-                Let’s Connect
-              </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground text-balance mb-6">
-                Whether you are exploring partnership, training, volunteering, or simply want to learn more about our work, we would love to hear from you.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground text-balance">
-                Start a conversation with us and take the first step towards emotional well-being, collaboration, and meaningful connection.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-8 shadow-card">
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-coral-light text-coral">
-                <MessageCircle className="h-7 w-7" strokeWidth={2} />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                We would love to hear from you
-              </h3>
-              <p className="text-base leading-relaxed text-muted-foreground">
-                Our team is here to support conversations around partnerships, training programs, volunteering opportunities, and emotional well-being initiatives.
-              </p>
-            </div>
-          </div>
+          <p className="text-lg leading-relaxed text-muted-foreground text-balance mb-4">
+            Whether you are exploring partnership, training, volunteering, or simply want to learn more about our work, we would love to hear from you.
+          </p>
+          <p className="text-lg leading-relaxed text-muted-foreground text-balance">
+            Start a conversation with us and take the first step towards emotional well-being, collaboration, and meaningful connection.
+          </p>
         </div>
       </section>
 
@@ -87,10 +58,10 @@ function ContactPage() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
               <Send className="h-4 w-4" />
-              Start a Conversation
+              Get In Touch
             </div>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
-              Start a Conversation
+              Start the Conversation
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               Fill in the form below and we will get back to you as soon as we can.
@@ -112,6 +83,7 @@ function ContactPage() {
         </div>
       </section>
 
+
       {/* Contact Details */}
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
@@ -121,11 +93,12 @@ function ContactPage() {
               Reach Us
             </div>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
-              Contact Details
+              We’re Here to Help
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               Here is how you can reach us directly.
             </p>
+
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-2xl border border-border bg-card p-8 text-center shadow-card transition-all hover:shadow-lg hover:-translate-y-1">
@@ -165,24 +138,32 @@ function ContactPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Social Links */}
-          <div className="mt-16 rounded-2xl border border-border bg-card p-8 sm:p-12 shadow-card">
+      {/* Social Media */}
+      <section className="px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="rounded-2xl border border-border bg-card p-8 sm:p-12 shadow-card">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold tracking-tight text-foreground text-balance mb-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
+                <Heart className="h-4 w-4" />
+                Stay Connected
+              </div>
+              <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
                 Follow Our Journey
-              </h3>
-              <p className="text-muted-foreground max-w-xl mx-auto">
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto text-balance">
                 Stay connected with our stories, impact updates, and community moments.
               </p>
             </div>
             <div className="flex justify-center">
               <SocialLinks />
             </div>
-
           </div>
         </div>
       </section>
+
 
       <Footer />
     </div>
