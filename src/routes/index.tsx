@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
@@ -9,7 +11,19 @@ import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
 import diaLogo from "@/assets/partners/dia.png.asset.json";
 import ichLogo from "@/assets/partners/ich.png.asset.json";
 import elmaLogo from "@/assets/partners/elma.png.asset.json";
-import heroImage from "@/assets/gallery/mindfulness.jpg.asset.json";
+import hero1 from "@/assets/hero/hero1.jpg.asset.json";
+import hero2 from "@/assets/hero/hero2.jpg.asset.json";
+import hero3 from "@/assets/hero/hero3.jpg.asset.json";
+import hero4 from "@/assets/hero/hero4.jpg.asset.json";
+import hero5 from "@/assets/hero/hero5.jpg.asset.json";
+
+const HERO_SLIDES = [
+  { src: hero1.url, alt: "MindWell Club school assembly with hundreds of students" },
+  { src: hero2.url, alt: "Interactive classroom emotional literacy session with school students" },
+  { src: hero3.url, alt: "Group mindfulness and sound healing session for adults" },
+  { src: hero4.url, alt: "Sound-based healing session with a young cancer warrior" },
+  { src: hero5.url, alt: "Compassionate one-on-one sound healing moment with a child" },
+];
 
 
 export const Route = createFileRoute("/")({
