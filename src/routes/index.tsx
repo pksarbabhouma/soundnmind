@@ -158,9 +158,12 @@ function LandingPage() {
           </div>
           <div className="mx-auto max-w-7xl">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
                 Our Impact
               </div>
+              <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
+                Transforming Lives
+              </h2>
             </div>
             <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
               {[
@@ -192,7 +195,7 @@ function LandingPage() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
-              About Sound 'N' Mind
+              Who We Are
             </div>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               About Sound 'N' Mind
@@ -203,9 +206,12 @@ function LandingPage() {
           </div>
 
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground">
-              Our Dual Engine
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
+              Our Approach
             </div>
+            <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
+              A Dual Engine for Lasting Social Impact
+            </h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
