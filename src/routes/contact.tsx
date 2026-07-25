@@ -30,7 +30,7 @@ function ContactPage() {
       <Navbar variant="page" />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 pt-16 pb-20 sm:px-6 lg:px-8 bg-card border-b border-border">
+      <section className="relative overflow-hidden px-4 pt-20 pb-24 sm:px-6 sm:pt-24 sm:pb-28 lg:px-8 bg-card border-b border-border">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-teal-light/30 blur-3xl" />
           <div className="absolute bottom-0 right-1/4 h-[300px] w-[500px] rounded-full bg-coral-light/20 blur-3xl" />
@@ -53,7 +53,7 @@ function ContactPage() {
       </section>
 
       {/* Enquiry Form */}
-      <section id="start-a-conversation" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
+      <section id="start-a-conversation" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-card border-y border-border">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
@@ -85,7 +85,7 @@ function ContactPage() {
 
 
       {/* Contact Details */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
@@ -143,7 +143,7 @@ function ContactPage() {
       </section>
 
       {/* Social Media */}
-      <section className="px-4 pb-20 sm:px-6 lg:px-8">
+      <section className="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-2xl border border-border bg-card p-8 sm:p-12 shadow-card">
             <div className="text-center mb-8">

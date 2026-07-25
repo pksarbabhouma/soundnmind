@@ -48,7 +48,7 @@ function OurWorkPage() {
       <Navbar variant="page" />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 pt-16 pb-20 sm:px-6 lg:px-8 bg-card border-b border-border">
+      <section className="relative overflow-hidden px-4 pt-20 pb-24 sm:px-6 sm:pt-24 sm:pb-28 lg:px-8 bg-card border-b border-border">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-teal-light/30 blur-3xl" />
           <div className="absolute bottom-0 right-1/4 h-[300px] w-[500px] rounded-full bg-coral-light/20 blur-3xl" />
@@ -67,7 +67,7 @@ function OurWorkPage() {
       </section>
 
       {/* Foundational Pillars */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
@@ -101,7 +101,7 @@ function OurWorkPage() {
       </section>
 
       {/* Seniors & Dementia Care */}
-      <section id="senior-care" className="px-4 py-20 sm:px-6 lg:px-8 bg-sand/40">
+      <section id="senior-care" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-sand/40">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 items-start">
             <div>
@@ -171,7 +171,7 @@ function OurWorkPage() {
       </section>
 
       {/* Schools */}
-      <section id="schools" className="px-4 py-20 sm:px-6 lg:px-8">
+      <section id="schools" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 items-start">
             <div className="order-2 lg:order-1 grid gap-6">
@@ -245,7 +245,7 @@ function OurWorkPage() {
       </section>
 
       {/* Cancer Warriors & Caregivers */}
-      <section id="cancer-warriors" className="px-4 py-20 sm:px-6 lg:px-8 bg-coral-light/30">
+      <section id="cancer-warriors" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-coral-light/30">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 items-start">
             <div>
@@ -294,7 +294,7 @@ function OurWorkPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
             Want to bring this work to your community?
