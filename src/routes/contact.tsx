@@ -108,10 +108,11 @@ function ContactPage() {
               <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
               <a
                 href="mailto:soundnmindfoundation@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-colors break-all"
+                className="block text-muted-foreground hover:text-primary transition-colors whitespace-nowrap text-[clamp(0.75rem,3.2vw,1rem)]"
               >
                 soundnmindfoundation@gmail.com
               </a>
+
             </div>
             <div className="rounded-2xl border border-border bg-card p-8 text-center shadow-card transition-all hover:shadow-lg hover:-translate-y-1">
               <div className="mx-auto mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-coral-light text-coral">
