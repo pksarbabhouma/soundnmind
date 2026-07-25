@@ -93,11 +93,12 @@ function ContactPage() {
               Reach Us
             </div>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
-              Contact Details
+              We’re Here to Help
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               Here is how you can reach us directly.
             </p>
+
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-2xl border border-border bg-card p-8 text-center shadow-card transition-all hover:shadow-lg hover:-translate-y-1">
