@@ -1,4 +1,3 @@
-import logoAsset from "@/assets/sound-n-mind-logo.jpg.asset.json";
 import { SocialLinks } from "@/components/SocialLinks";
 
 
@@ -6,15 +5,7 @@ export function Footer() {
   return (
     <footer className="px-4 py-16 sm:px-6 lg:px-8 bg-navy text-white">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <img src={logoAsset.url} alt="Sound N Mind Foundation" className="h-10 w-auto bg-white rounded-md p-1" />
-            </div>
-            <p className="text-sm leading-relaxed text-white/70">
-              Creating emotionally resilient individuals and compassionate communities across India.
-            </p>
-          </div>
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">Our Work</h3>
             <ul className="space-y-3 text-sm text-white/70">
