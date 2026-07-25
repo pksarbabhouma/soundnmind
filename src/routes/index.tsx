@@ -75,7 +75,7 @@ function LandingPage() {
               alt={s.alt}
               loading={i === 0 ? "eager" : "lazy"}
               fetchPriority={i === 0 ? "high" : "low"}
-              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-linear ${
                 i === slide ? "opacity-100" : "opacity-0"
               }`}
             />
