@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
@@ -9,7 +11,19 @@ import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
 import diaLogo from "@/assets/partners/dia.png.asset.json";
 import ichLogo from "@/assets/partners/ich.png.asset.json";
 import elmaLogo from "@/assets/partners/elma.png.asset.json";
-import heroImage from "@/assets/gallery/mindfulness.jpg.asset.json";
+import hero1 from "@/assets/hero/hero1.jpg.asset.json";
+import hero2 from "@/assets/hero/hero2.jpg.asset.json";
+import hero3 from "@/assets/hero/hero3.jpg.asset.json";
+import hero4 from "@/assets/hero/hero4.jpg.asset.json";
+import hero5 from "@/assets/hero/hero5.jpg.asset.json";
+
+const HERO_SLIDES = [
+  { src: hero1.url, alt: "MindWell Club school assembly with hundreds of students" },
+  { src: hero2.url, alt: "Interactive classroom emotional literacy session with school students" },
+  { src: hero3.url, alt: "Group mindfulness and sound healing session for adults" },
+  { src: hero4.url, alt: "Sound-based healing session with a young cancer warrior" },
+  { src: hero5.url, alt: "Compassionate one-on-one sound healing moment with a child" },
+];
 
 
 export const Route = createFileRoute("/")({
@@ -30,20 +44,42 @@ export const Route = createFileRoute("/")({
 
 
 function LandingPage() {
+  const [slide, setSlide] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const total = HERO_SLIDES.length;
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setSlide((s) => (s + 1) % total), 5000);
+    return () => clearInterval(id);
+  }, [paused, total]);
+
+  const go = (dir: number) => setSlide((s) => (s + dir + total) % total);
+
   return (
     <div id="home" className="min-h-screen bg-background">
       <Navbar variant="home" />
 
       {/* Hero Section */}
       <section className="relative">
-        <div className="relative w-full overflow-hidden min-h-[520px] sm:min-h-[560px] lg:min-h-[600px]">
-          {/* Background image */}
-          <img
-            src={heroImage.url}
-            alt="Group mindfulness and sound healing session — participants gathered in a circle in a moment of collective calm and connection"
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="eager"
-          />
+        <div
+          className="relative w-full overflow-hidden min-h-[520px] sm:min-h-[560px] lg:min-h-[600px]"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          {/* Background image carousel with cross-fade */}
+          {HERO_SLIDES.map((s, i) => (
+            <img
+              key={i}
+              src={s.src}
+              alt={s.alt}
+              loading={i === 0 ? "eager" : "lazy"}
+              fetchPriority={i === 0 ? "high" : "low"}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+                i === slide ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
           {/* Overlays for text legibility */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/10" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -77,7 +113,42 @@ function LandingPage() {
               </div>
             </div>
           </div>
+
+          {/* Carousel controls */}
+          <button
+            type="button"
+            onClick={() => go(-1)}
+            aria-label="Previous slide"
+            className="absolute left-3 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white/60 sm:left-5 sm:h-11 sm:w-11"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => go(1)}
+            aria-label="Next slide"
+            className="absolute right-3 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white/60 sm:right-5 sm:h-11 sm:w-11"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+
+          {/* Pagination dots */}
+          <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 sm:bottom-6">
+            {HERO_SLIDES.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setSlide(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                aria-current={i === slide}
+                className={`h-2 rounded-full transition-all ${
+                  i === slide ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/80"
+                }`}
+              />
+            ))}
+          </div>
         </div>
+
 
         {/* Impact metrics */}
         <div className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
