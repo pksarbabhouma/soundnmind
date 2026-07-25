@@ -44,20 +44,42 @@ export const Route = createFileRoute("/")({
 
 
 function LandingPage() {
+  const [slide, setSlide] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const total = HERO_SLIDES.length;
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setSlide((s) => (s + 1) % total), 5000);
+    return () => clearInterval(id);
+  }, [paused, total]);
+
+  const go = (dir: number) => setSlide((s) => (s + dir + total) % total);
+
   return (
     <div id="home" className="min-h-screen bg-background">
       <Navbar variant="home" />
 
       {/* Hero Section */}
       <section className="relative">
-        <div className="relative w-full overflow-hidden min-h-[520px] sm:min-h-[560px] lg:min-h-[600px]">
-          {/* Background image */}
-          <img
-            src={heroImage.url}
-            alt="Group mindfulness and sound healing session — participants gathered in a circle in a moment of collective calm and connection"
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="eager"
-          />
+        <div
+          className="relative w-full overflow-hidden min-h-[520px] sm:min-h-[560px] lg:min-h-[600px]"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          {/* Background image carousel with cross-fade */}
+          {HERO_SLIDES.map((s, i) => (
+            <img
+              key={i}
+              src={s.src}
+              alt={s.alt}
+              loading={i === 0 ? "eager" : "lazy"}
+              fetchPriority={i === 0 ? "high" : "low"}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+                i === slide ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
           {/* Overlays for text legibility */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/10" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
