@@ -3,7 +3,7 @@ import { SocialLinks } from "@/components/SocialLinks";
 
 export function Footer() {
   return (
-    <footer className="px-4 py-16 sm:px-6 lg:px-8 bg-navy text-white">
+    <footer className="px-4 py-16 sm:px-6 lg:px-8 lg:py-20 bg-navy text-white">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           <div>

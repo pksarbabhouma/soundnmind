@@ -151,7 +151,7 @@ function LandingPage() {
 
 
         {/* Impact metrics */}
-        <div className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <div className="absolute inset-0 -z-10">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-teal-light/40 blur-3xl" />
             <div className="absolute bottom-0 right-1/4 h-[400px] w-[600px] rounded-full bg-coral-light/30 blur-3xl" />
@@ -191,7 +191,7 @@ function LandingPage() {
 
 
       {/* About Section */}
-      <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
+      <section id="about" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
@@ -254,7 +254,7 @@ function LandingPage() {
 
 
       {/* Our Focus Areas Section */}
-      <section id="focus-areas" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
+      <section id="focus-areas" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
@@ -293,7 +293,7 @@ function LandingPage() {
       </section>
 
       {/* Programs Snapshot Section */}
-      <section id="programs-snapshot" className="px-4 py-20 sm:px-6 lg:px-8">
+      <section id="programs-snapshot" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
@@ -383,7 +383,7 @@ function LandingPage() {
 
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="px-4 py-20 sm:px-6 lg:px-8">
+      <section id="testimonials" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
@@ -401,7 +401,7 @@ function LandingPage() {
       </section>
 
       {/* Partners & Collaborators Section */}
-      <section id="partners" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
+      <section id="partners" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
@@ -504,7 +504,7 @@ function LandingPage() {
 
 
       {/* Donation / Payment Section */}
-      <section id="donate" className="px-4 py-20 sm:px-6 lg:px-8 bg-card border-y border-border">
+      <section id="donate" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-card border-y border-border">
         <div className="mx-auto max-w-4xl">
           <div className="relative overflow-hidden rounded-3xl border border-border bg-background shadow-card">
             <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-light/30 via-transparent to-coral-light/20" />

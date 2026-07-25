@@ -24,7 +24,7 @@ function AboutPage() {
       <Navbar variant="page" />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 pt-16 pb-20 sm:px-6 lg:px-8 bg-card border-b border-border">
+      <section className="relative overflow-hidden px-4 pt-20 pb-24 sm:px-6 sm:pt-24 sm:pb-28 lg:px-8 bg-card border-b border-border">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-teal-light/30 blur-3xl" />
           <div className="absolute bottom-0 right-1/4 h-[300px] w-[500px] rounded-full bg-coral-light/20 blur-3xl" />
@@ -43,7 +43,7 @@ function AboutPage() {
       </section>
 
       {/* Content */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-3xl space-y-20">
           {/* Who We Are */}
           <div>
