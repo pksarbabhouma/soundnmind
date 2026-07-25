@@ -113,7 +113,42 @@ function LandingPage() {
               </div>
             </div>
           </div>
+
+          {/* Carousel controls */}
+          <button
+            type="button"
+            onClick={() => go(-1)}
+            aria-label="Previous slide"
+            className="absolute left-3 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white/60 sm:left-5 sm:h-11 sm:w-11"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => go(1)}
+            aria-label="Next slide"
+            className="absolute right-3 top-1/2 z-10 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white/60 sm:right-5 sm:h-11 sm:w-11"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+
+          {/* Pagination dots */}
+          <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 sm:bottom-6">
+            {HERO_SLIDES.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setSlide(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                aria-current={i === slide}
+                className={`h-2 rounded-full transition-all ${
+                  i === slide ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/80"
+                }`}
+              />
+            ))}
+          </div>
         </div>
+
 
         {/* Impact metrics */}
         <div className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
