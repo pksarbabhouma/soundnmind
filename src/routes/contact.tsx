@@ -138,24 +138,32 @@ function ContactPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Social Links */}
-          <div className="mt-16 rounded-2xl border border-border bg-card p-8 sm:p-12 shadow-card">
+      {/* Social Media */}
+      <section className="px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="rounded-2xl border border-border bg-card p-8 sm:p-12 shadow-card">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold tracking-tight text-foreground text-balance mb-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
+                <Heart className="h-4 w-4" />
+                Stay Connected
+              </div>
+              <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
                 Follow Our Journey
-              </h3>
-              <p className="text-muted-foreground max-w-xl mx-auto">
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto text-balance">
                 Stay connected with our stories, impact updates, and community moments.
               </p>
             </div>
             <div className="flex justify-center">
               <SocialLinks />
             </div>
-
           </div>
         </div>
       </section>
+
 
       <Footer />
     </div>
