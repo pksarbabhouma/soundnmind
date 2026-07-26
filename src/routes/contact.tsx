@@ -87,6 +87,7 @@ function ContactPage() {
                 title="Sound 'N' Mind Foundation Enquiry Form"
                 className="h-full w-full border-0"
                 loading="lazy"
+                onLoad={handleFormLoad}
               >
                 Loading…
               </iframe>
