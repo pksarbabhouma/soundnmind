@@ -524,7 +524,17 @@ function LandingPage() {
                 
                 <a
                   href="https://razorpay.me/@SOUNDNMINDFOUNDATION"
-                  onClick={() => trackEvent("donate_click", { location: "donate_section_razorpay" })}
+                  data-analytics-id="razorpay-donate"
+                  onClick={(e) => {
+                    const url = e.currentTarget.href;
+                    const text = e.currentTarget.innerText.trim();
+                    trackEvent("razorpay_donate_click", {
+                      page_location: typeof window !== "undefined" ? window.location.href : "",
+                      page_title: typeof document !== "undefined" ? document.title : "",
+                      button_text: text,
+                      destination_url: url,
+                    });
+                  }}
                   className="mt-4 inline-flex items-center justify-center rounded-xl bg-primary px-10 py-4 text-lg font-bold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
                 >
                   Donate Securely via Razorpay
@@ -532,6 +542,7 @@ function LandingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
+
                 <p className="mt-3 text-sm text-muted-foreground">
                   All donations are tax-exempt under Section 80G
                 </p>
