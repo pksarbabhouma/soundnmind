@@ -84,6 +84,7 @@ export function Navbar({ variant }: { variant: "home" | "page" }) {
           ))}
           <a
             href="/#donate"
+            onClick={() => trackEvent("donate_click", { location: "navbar_desktop" })}
             className="ml-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-cta hover:bg-primary/90 transition-colors"
           >
             Donate
