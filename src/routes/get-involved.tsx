@@ -204,6 +204,7 @@ function GetInvolvedPage() {
                   </p>
                   <a
                     href="/#donate"
+                    onClick={() => trackEvent("donate_click", { location: "get_involved_cause", cause: cause.title })}
                     className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
                   >
                     Support Us
