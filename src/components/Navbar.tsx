@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logoAsset from "@/assets/sound-n-mind-logo.jpg.asset.json";
+import { trackEvent } from "@/lib/analytics";
 
 type MenuItem = {
   label: string;
