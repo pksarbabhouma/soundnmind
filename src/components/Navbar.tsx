@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logoAsset from "@/assets/sound-n-mind-logo.jpg.asset.json";
+import { trackEvent } from "@/lib/analytics";
 
 type MenuItem = {
   label: string;
@@ -83,6 +84,7 @@ export function Navbar({ variant }: { variant: "home" | "page" }) {
           ))}
           <a
             href="/#donate"
+            onClick={() => trackEvent("donate_click", { location: "navbar_desktop" })}
             className="ml-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-cta hover:bg-primary/90 transition-colors"
           >
             Donate
@@ -155,7 +157,10 @@ export function Navbar({ variant }: { variant: "home" | "page" }) {
             ))}
             <a
               href="/#donate"
-              onClick={() => setMobileOpen(false)}
+              onClick={() => {
+                trackEvent("donate_click", { location: "navbar_mobile" });
+                setMobileOpen(false);
+              }}
               className="mt-3 block rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-cta"
             >
               Donate

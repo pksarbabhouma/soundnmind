@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { CountUp } from "@/components/CountUp";
+import { trackEvent } from "@/lib/analytics";
 import premashrayaLogo from "@/assets/partners/premashraya.png.asset.json";
 import stJudeLogo from "@/assets/partners/st-jude.png.asset.json";
 import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
@@ -106,6 +107,7 @@ function LandingPage() {
                 </a>
                 <a
                   href="#donate"
+                  onClick={() => trackEvent("donate_click", { location: "hero" })}
                   className="inline-flex items-center justify-center rounded-xl border-2 border-white/70 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white hover:text-foreground hover:scale-105"
                 >
                   Donate for Impact
@@ -522,6 +524,7 @@ function LandingPage() {
                 
                 <a
                   href="https://razorpay.me/@SOUNDNMINDFOUNDATION"
+                  onClick={() => trackEvent("donate_click", { location: "donate_section_razorpay" })}
                   className="mt-4 inline-flex items-center justify-center rounded-xl bg-primary px-10 py-4 text-lg font-bold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
                 >
                   Donate Securely via Razorpay

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { HandHeart, Users, Heart, GraduationCap, Gift, ArrowRight, CheckCircle2 } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/get-involved")({
   head: () => ({
@@ -203,6 +204,7 @@ function GetInvolvedPage() {
                   </p>
                   <a
                     href="/#donate"
+                    onClick={() => trackEvent("donate_click", { location: "get_involved_cause", cause: cause.title })}
                     className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
                   >
                     Support Us

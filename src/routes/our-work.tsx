@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { trackEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/our-work")({
   head: () => ({
@@ -311,6 +312,7 @@ function OurWorkPage() {
             </a>
             <a
               href="/#donate"
+              onClick={() => trackEvent("donate_click", { location: "our_work_cta" })}
               className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
             >
               Donate for Impact
