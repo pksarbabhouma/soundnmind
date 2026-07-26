@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useRef } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SocialLinks } from "@/components/SocialLinks";
+import { trackEvent } from "@/lib/analytics";
 
 import { Mail, Phone, MapPin, MessageCircle, Send, Heart, Sparkles } from "lucide-react";
 
