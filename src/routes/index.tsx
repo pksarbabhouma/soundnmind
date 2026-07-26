@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { CountUp } from "@/components/CountUp";
+import { trackEvent } from "@/lib/analytics";
 import premashrayaLogo from "@/assets/partners/premashraya.png.asset.json";
 import stJudeLogo from "@/assets/partners/st-jude.png.asset.json";
 import cankidsLogo from "@/assets/partners/cankids.png.asset.json";
