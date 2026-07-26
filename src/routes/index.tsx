@@ -524,6 +524,7 @@ function LandingPage() {
                 
                 <a
                   href="https://razorpay.me/@SOUNDNMINDFOUNDATION"
+                  onClick={() => trackEvent("donate_click", { location: "donate_section_razorpay" })}
                   className="mt-4 inline-flex items-center justify-center rounded-xl bg-primary px-10 py-4 text-lg font-bold text-primary-foreground shadow-cta transition-all hover:scale-105 hover:bg-primary/90"
                 >
                   Donate Securely via Razorpay
