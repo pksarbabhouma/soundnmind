@@ -25,7 +25,17 @@ export const Route = createFileRoute("/contact")({
 
 
 function ContactPage() {
+  // Google Forms iframe fires a 'load' event on initial render, and again after
+  // a successful submission when it navigates to the confirmation page. We skip
+  // the first load and treat each subsequent load as a successful submit.
+  const loadCountRef = useRef(0);
 
+  const handleFormLoad = () => {
+    loadCountRef.current += 1;
+    if (loadCountRef.current > 1) {
+      trackEvent("contact_form_submit", { form: "google_form_enquiry" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
