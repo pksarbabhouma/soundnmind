@@ -157,7 +157,10 @@ export function Navbar({ variant }: { variant: "home" | "page" }) {
             ))}
             <a
               href="/#donate"
-              onClick={() => setMobileOpen(false)}
+              onClick={() => {
+                trackEvent("donate_click", { location: "navbar_mobile" });
+                setMobileOpen(false);
+              }}
               className="mt-3 block rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-cta"
             >
               Donate
