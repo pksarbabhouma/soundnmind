@@ -23,6 +23,7 @@ function getMenu(variant: "home" | "page"): MenuItem[] {
         { label: "Cancer Warriors & Caregivers", href: "/our-work#cancer-warriors" },
       ],
     },
+    { label: "Our Team", href: "/our-team" },
     { label: "Gallery", href: "/gallery" },
     {
       label: "Get Involved",

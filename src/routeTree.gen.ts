@@ -15,6 +15,7 @@ import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as GetInvolvedRouteImport } from './routes/get-involved'
+import { Route as OurTeamRouteImport } from './routes/our-team'
 import { Route as OurWorkRouteImport } from './routes/our-work'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const GetInvolvedRoute = GetInvolvedRouteImport.update({
   path: '/get-involved',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OurTeamRoute = OurTeamRouteImport.update({
+  id: '/our-team',
+  path: '/our-team',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OurWorkRoute = OurWorkRouteImport.update({
   id: '/our-work',
   path: '/our-work',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/get-involved': typeof GetInvolvedRoute
+  '/our-team': typeof OurTeamRoute
   '/our-work': typeof OurWorkRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/get-involved': typeof GetInvolvedRoute
+  '/our-team': typeof OurTeamRoute
   '/our-work': typeof OurWorkRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/get-involved': typeof GetInvolvedRoute
+  '/our-team': typeof OurTeamRoute
   '/our-work': typeof OurWorkRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/gallery'
     | '/get-involved'
+    | '/our-team'
     | '/our-work'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/gallery'
     | '/get-involved'
+    | '/our-team'
     | '/our-work'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/gallery'
     | '/get-involved'
+    | '/our-team'
     | '/our-work'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
   GetInvolvedRoute: typeof GetInvolvedRoute
+  OurTeamRoute: typeof OurTeamRoute
   OurWorkRoute: typeof OurWorkRoute
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GetInvolvedRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/our-team': {
+      id: '/our-team'
+      path: '/our-team'
+      fullPath: '/our-team'
+      preLoaderRoute: typeof OurTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/our-work': {
       id: '/our-work'
       path: '/our-work'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
   GetInvolvedRoute: GetInvolvedRoute,
+  OurTeamRoute: OurTeamRoute,
   OurWorkRoute: OurWorkRoute,
 }
 export const routeTree = rootRouteImport
