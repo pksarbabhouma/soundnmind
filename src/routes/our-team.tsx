@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SectionBadge } from "@/components/SectionBadge";
 
 export const Route = createFileRoute("/our-team")({
   head: () => ({
@@ -204,9 +205,9 @@ function OurTeamPage() {
           <div className="absolute bottom-0 right-1/4 h-[300px] w-[500px] rounded-full bg-coral-light/20 blur-3xl" />
         </div>
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-6">
+          <SectionBadge className="mb-6">
             Our People
-          </div>
+          </SectionBadge>
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
             Meet Our <span className="text-primary">Team</span>
           </h1>
@@ -223,9 +224,9 @@ function OurTeamPage() {
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
+            <SectionBadge variant="card" className="mb-6">
               Leadership
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground leading-[1.15]">
               Our Leadership Team
             </h2>
@@ -242,9 +243,9 @@ function OurTeamPage() {
       <section className="bg-muted/50 border-y border-border px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
+            <SectionBadge variant="card" className="mb-6">
               Our Network
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground leading-[1.15]">
               Together, We Care
             </h2>

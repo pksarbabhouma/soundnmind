@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SectionBadge } from "@/components/SectionBadge";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -30,9 +31,9 @@ function AboutPage() {
           <div className="absolute bottom-0 right-1/4 h-[300px] w-[500px] rounded-full bg-coral-light/20 blur-3xl" />
         </div>
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-6">
+          <SectionBadge className="mb-6">
             Our Journey
-          </div>
+          </SectionBadge>
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
             About <span className="text-primary">Us</span>
           </h1>

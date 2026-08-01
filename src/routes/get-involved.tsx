@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SectionBadge } from "@/components/SectionBadge";
 import { HandHeart, Users, Heart, GraduationCap, Gift, ArrowRight, CheckCircle2 } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
@@ -52,10 +53,10 @@ function GetInvolvedPage() {
           <div className="absolute bottom-0 right-1/4 h-[300px] w-[500px] rounded-full bg-coral-light/20 blur-3xl" />
         </div>
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-6">
+          <SectionBadge className="mb-6">
             <HandHeart className="h-4 w-4" />
             Be Part of the Change
-          </div>
+          </SectionBadge>
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
             Get <span className="text-primary">Involved</span>
           </h1>
@@ -70,10 +71,10 @@ function GetInvolvedPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+              <SectionBadge variant="card" className="mb-4">
                 <Users className="h-4 w-4" />
                 Collaboration
-              </div>
+              </SectionBadge>
               <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
                 Partner With Us
               </h2>
@@ -111,10 +112,10 @@ function GetInvolvedPage() {
       <section id="volunteer" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
+            <SectionBadge className="mb-4">
               <Heart className="h-4 w-4" />
               Give Your Presence
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
               Volunteer / Train
             </h2>
@@ -165,10 +166,10 @@ function GetInvolvedPage() {
       <section id="donate" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+            <SectionBadge variant="card" className="mb-4">
               <Gift className="h-4 w-4" />
               Give
-            </div>
+            </SectionBadge>
             <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-6">
               Donate
             </h2>

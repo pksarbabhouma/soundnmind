@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SectionBadge } from "@/components/SectionBadge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { trackEvent } from "@/lib/analytics";
 
@@ -55,9 +56,9 @@ function OurWorkPage() {
           <div className="absolute bottom-0 right-1/4 h-[300px] w-[500px] rounded-full bg-coral-light/20 blur-3xl" />
         </div>
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-6">
+          <SectionBadge className="mb-6">
             What We Do
-          </div>
+          </SectionBadge>
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1]">
             Our <span className="text-primary">Work</span>
           </h1>
@@ -106,9 +107,9 @@ function OurWorkPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 items-start">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+              <SectionBadge variant="card" className="mb-4">
                 Older Adults
-              </div>
+              </SectionBadge>
               <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-4">
                 Seniors & Dementia Care
               </h2>
@@ -222,9 +223,9 @@ function OurWorkPage() {
               </Card>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+              <SectionBadge variant="card" className="mb-4">
                 Education
-              </div>
+              </SectionBadge>
               <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-4">
                 Schools
               </h2>
@@ -250,9 +251,9 @@ function OurWorkPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 items-start">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+              <SectionBadge variant="card" className="mb-4">
                 Cancer Support
-              </div>
+              </SectionBadge>
               <h2 className="section-heading-left text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15] mb-4">
                 Cancer Warriors & Caregivers
               </h2>

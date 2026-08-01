@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { CountUp } from "@/components/CountUp";
+import { SectionBadge } from "@/components/SectionBadge";
 import { trackEvent } from "@/lib/analytics";
 import premashrayaLogo from "@/assets/partners/premashraya.png.asset.json";
 import stJudeLogo from "@/assets/partners/st-jude.png.asset.json";
@@ -160,9 +161,9 @@ function LandingPage() {
           </div>
           <div className="mx-auto max-w-7xl">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
+              <SectionBadge variant="card" className="mb-6">
                 Our Impact
-              </div>
+              </SectionBadge>
               <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
                 Transforming Lives
               </h2>
@@ -196,9 +197,9 @@ function LandingPage() {
       <section id="about" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
+            <SectionBadge variant="card" className="mb-6">
               Who We Are
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               About Sound 'N' Mind
             </h2>
@@ -208,9 +209,9 @@ function LandingPage() {
           </div>
 
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
+            <SectionBadge variant="card" className="mb-6">
               Our Approach
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               A Dual Engine for Lasting Social Impact
             </h2>
@@ -259,9 +260,9 @@ function LandingPage() {
       <section id="focus-areas" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
+            <SectionBadge className="mb-4">
               How We Create Impact
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Our Focus Areas
             </h2>
@@ -298,9 +299,9 @@ function LandingPage() {
       <section id="programs-snapshot" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+            <SectionBadge variant="card" className="mb-4">
               Our Initiatives
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Programs Snapshot
             </h2>
@@ -388,9 +389,9 @@ function LandingPage() {
       <section id="testimonials" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+            <SectionBadge variant="card" className="mb-4">
               Voices of Impact
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Testimonials
             </h2>
@@ -406,9 +407,9 @@ function LandingPage() {
       <section id="partners" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-card border-y border-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
+            <SectionBadge className="mb-4">
               Collaborating for Change
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Partners & Collaborators
             </h2>
@@ -511,9 +512,9 @@ function LandingPage() {
           <div className="relative overflow-hidden rounded-3xl border border-border bg-background shadow-card">
             <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-light/30 via-transparent to-coral-light/20" />
             <div className="px-6 py-16 text-center sm:px-12">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-6">
+              <SectionBadge variant="card" className="mb-6">
                 🙏 100% of donations fund our programs
-              </div>
+              </SectionBadge>
               <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
                 Be Part of a More Emotionally Resilient World
               </h2>
