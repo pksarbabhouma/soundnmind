@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SocialLinks } from "@/components/SocialLinks";
+import { SectionBadge } from "@/components/SectionBadge";
 import { trackEvent } from "@/lib/analytics";
 
 import { Mail, Phone, MapPin, MessageCircle, Send, Heart, Sparkles } from "lucide-react";
@@ -48,10 +49,10 @@ function ContactPage() {
           <div className="absolute bottom-0 right-1/4 h-[300px] w-[500px] rounded-full bg-coral-light/20 blur-3xl" />
         </div>
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-6">
+          <SectionBadge className="mb-6">
             <Heart className="h-4 w-4" />
             Contact
-          </div>
+          </SectionBadge>
           <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance leading-[1.1] mb-6">
             Let’s Connect
           </h1>
@@ -68,10 +69,10 @@ function ContactPage() {
       <section id="start-a-conversation" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 bg-card border-y border-border">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
+            <SectionBadge className="mb-4">
               <Send className="h-4 w-4" />
               Get In Touch
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               Start the Conversation
             </h2>
@@ -101,10 +102,10 @@ function ContactPage() {
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-4">
+            <SectionBadge variant="card" className="mb-4">
               <Mail className="h-4 w-4" />
               Reach Us
-            </div>
+            </SectionBadge>
             <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
               We’re Here to Help
             </h2>
@@ -160,10 +161,10 @@ function ContactPage() {
         <div className="mx-auto max-w-6xl">
           <div className="rounded-2xl border border-border bg-card p-8 sm:p-12 shadow-card">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground mb-4">
+              <SectionBadge className="mb-4">
                 <Heart className="h-4 w-4" />
                 Stay Connected
-              </div>
+              </SectionBadge>
               <h2 className="section-heading text-[2rem] sm:text-[2.25rem] md:text-5xl font-semibold tracking-tight text-foreground text-balance leading-[1.15]">
                 Follow Our Journey
               </h2>
