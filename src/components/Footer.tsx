@@ -44,15 +44,10 @@ export function Footer() {
 
           </div>
         </div>
-        <div className="mt-12 border-t border-white/10 pt-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div className="mt-12 border-t border-white/10 pt-8 flex items-center justify-center">
           <p className="text-sm text-white/50">
             © 2026 Sound N Mind. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-white/50">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">80G Certificate</a>
-          </div>
         </div>
       </div>
     </footer>
