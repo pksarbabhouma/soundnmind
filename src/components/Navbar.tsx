@@ -25,6 +25,7 @@ function getMenu(variant: "home" | "page"): MenuItem[] {
     },
     { label: "Our Team", href: "/our-team" },
     { label: "Gallery", href: "/gallery" },
+    { label: "Events", href: "/events" },
     {
       label: "Get Involved",
       href: "/get-involved",
