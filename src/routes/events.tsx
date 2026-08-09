@@ -42,7 +42,23 @@ export const Route = createFileRoute("/events")({
   component: EventsPage,
 });
 
-function EventCard({ event, past }: { event: SnmEvent; past: boolean }) {
+const FORM_BASE =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeW9WIoMpvHlcz0brIxn8oAoo2WcAfbYNBYHf6BSPW5TQW-eA/viewform";
+const EVENT_ENTRY_ID = "entry.1166368428";
+
+function buildFormUrl(title: string): string {
+  return `${FORM_BASE}?usp=pp_url&embedded=true&${EVENT_ENTRY_ID}=${encodeURIComponent(title)}`;
+}
+
+function EventCard({
+  event,
+  past,
+  onRegister,
+}: {
+  event: SnmEvent;
+  past: boolean;
+  onRegister: (event: SnmEvent) => void;
+}) {
   const heading = event.title || event.description || "Event";
   const body = event.title ? event.description : "";
 
