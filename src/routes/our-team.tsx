@@ -142,9 +142,13 @@ function MemberCard({ member }: { member: Member }) {
       <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left sm:gap-6">
         <div
           className={`mb-5 grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-full ${avatarBg} text-2xl font-bold text-foreground/70 ring-4 ring-background transition-transform duration-300 group-hover:scale-105 sm:mb-0`}
-          aria-hidden="true"
         >
-          {member.initials}
+          <img
+            src={member.photo}
+            alt={`${member.name}, ${member.role}`}
+            loading="lazy"
+            className="h-full w-full object-cover object-top"
+          />
         </div>
         <div>
           <h3 className="text-xl font-semibold tracking-tight text-foreground">{member.name}</h3>
