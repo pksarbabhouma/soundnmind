@@ -40,6 +40,7 @@ const TEAM: Member[] = [
     name: "Sourish Choudhury",
     role: "Founder & Director",
     initials: "SC",
+    photo: sourishPhoto.url,
     accent: "teal",
     intro:
       "Sourish Choudhury is the Founder and Director of Sound \u2019N\u2019 Mind Foundation and a passionate advocate for emotional wellbeing and preventive mental health.",
@@ -62,6 +63,7 @@ const TEAM: Member[] = [
     name: "Debashish Das",
     role: "Co-Founder & Director",
     initials: "DD",
+    photo: debashishPhoto.url,
     accent: "coral",
     intro:
       "Debashish Das is a mindfulness-based emotional wellness practitioner and sound frequency guide with professional experience across the medical and technology sectors.",
@@ -81,6 +83,7 @@ const TEAM: Member[] = [
     name: "Susanto Paul",
     role: "Chief Operating Officer",
     initials: "SP",
+    photo: susantoPhoto.url,
     accent: "coral",
     intro:
       "Susanto Paul oversees operations and programme implementation, helping translate the Foundation\u2019s vision into impactful community initiatives.",
@@ -101,6 +104,7 @@ const TEAM: Member[] = [
     name: "Tanushree Biswas",
     role: "Strategy Advisor",
     initials: "TB",
+    photo: tanushreePhoto.url,
     accent: "teal",
     intro:
       "Tanushree Biswas supports the Foundation\u2019s strategic planning, programme coordination, and community engagement initiatives.",
