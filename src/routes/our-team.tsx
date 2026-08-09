@@ -3,6 +3,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SectionBadge } from "@/components/SectionBadge";
+import sourishPhoto from "@/assets/team/Sourish_Choudhury.png.asset.json";
+import debashishPhoto from "@/assets/team/Debashish_Das.png.asset.json";
+import susantoPhoto from "@/assets/team/Susanto_Paul.jpeg.asset.json";
+import tanushreePhoto from "@/assets/team/Tanusree_Biswas.jpg.asset.json";
 
 export const Route = createFileRoute("/our-team")({
   head: () => ({
