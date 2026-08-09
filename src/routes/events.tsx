@@ -239,7 +239,35 @@ function EventsPage() {
         </div>
       </section>
 
+      <Dialog
+        open={selected !== null}
+        onOpenChange={(open) => !open && setSelected(null)}
+      >
+        <DialogContent className="max-h-[90vh] w-[calc(100vw-2rem)] max-w-2xl overflow-hidden p-0 sm:w-full">
+          <DialogHeader className="border-b border-border px-5 py-4 text-left sm:px-6">
+            <DialogTitle className="pr-8 text-lg font-semibold leading-snug">
+              Register for {selected?.title || "this event"}
+            </DialogTitle>
+            <DialogDescription className="sr-only">
+              Registration form for {selected?.title || "this event"}
+            </DialogDescription>
+          </DialogHeader>
+          {selected && (
+            <iframe
+              key={selected.event_id || selected.title}
+              src={buildFormUrl(selected.title)}
+              title={`Registration form for ${selected.title}`}
+              className="h-[70vh] max-h-[70vh] w-full border-0"
+              loading="lazy"
+            >
+              Loading…
+            </iframe>
+          )}
+        </DialogContent>
+      </Dialog>
+
       <Footer />
+
     </div>
   );
 }
