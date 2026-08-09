@@ -141,7 +141,7 @@ function MemberCard({ member }: { member: Member }) {
     <article className="group rounded-2xl border border-border bg-card p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-cta">
       <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left sm:gap-6">
         <div
-          className={`mb-5 grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-full ${avatarBg} text-2xl font-bold text-foreground/70 ring-4 ring-background transition-transform duration-300 group-hover:scale-105 sm:mb-0`}
+          className={`mb-5 block h-24 w-24 shrink-0 overflow-hidden rounded-full ${avatarBg} text-2xl font-bold text-foreground/70 ring-4 ring-background transition-transform duration-300 group-hover:scale-105 sm:mb-0`}
         >
           <img
             src={member.photo}
