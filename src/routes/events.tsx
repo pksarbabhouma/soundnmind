@@ -184,7 +184,13 @@ function EventsPage() {
           ) : (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {upcoming.map((e) => (
-                <EventCard key={e.event_id || e.title} event={e} past={false} />
+                <EventCard
+                  key={e.event_id || e.title}
+                  event={e}
+                  past={false}
+                  onRegister={handleRegister}
+                />
+
               ))}
             </div>
           )}
