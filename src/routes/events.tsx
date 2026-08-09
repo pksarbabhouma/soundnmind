@@ -1,5 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { trackEvent } from "@/lib/analytics";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SectionBadge } from "@/components/SectionBadge";
@@ -33,7 +42,23 @@ export const Route = createFileRoute("/events")({
   component: EventsPage,
 });
 
-function EventCard({ event, past }: { event: SnmEvent; past: boolean }) {
+const FORM_BASE =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeW9WIoMpvHlcz0brIxn8oAoo2WcAfbYNBYHf6BSPW5TQW-eA/viewform";
+const EVENT_ENTRY_ID = "entry.1166368428";
+
+function buildFormUrl(title: string): string {
+  return `${FORM_BASE}?usp=pp_url&embedded=true&${EVENT_ENTRY_ID}=${encodeURIComponent(title)}`;
+}
+
+function EventCard({
+  event,
+  past,
+  onRegister,
+}: {
+  event: SnmEvent;
+  past: boolean;
+  onRegister: (event: SnmEvent) => void;
+}) {
   const heading = event.title || event.description || "Event";
   const body = event.title ? event.description : "";
 
@@ -72,6 +97,7 @@ function EventCard({ event, past }: { event: SnmEvent; past: boolean }) {
         <div className="mt-6 pt-2">
           <button
             type="button"
+            onClick={() => onRegister(event)}
             className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-cta transition-colors hover:bg-primary/90"
           >
             Register Now
@@ -97,6 +123,15 @@ function EventsPage() {
   });
 
   const { upcoming, past } = splitEvents(data ?? []);
+  const [selected, setSelected] = useState<SnmEvent | null>(null);
+
+  const handleRegister = (event: SnmEvent) => {
+    trackEvent("event_register_click", {
+      event_id: event.event_id,
+      event_title: event.title,
+    });
+    setSelected(event);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -149,7 +184,13 @@ function EventsPage() {
           ) : (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {upcoming.map((e) => (
-                <EventCard key={e.event_id || e.title} event={e} past={false} />
+                <EventCard
+                  key={e.event_id || e.title}
+                  event={e}
+                  past={false}
+                  onRegister={handleRegister}
+                />
+
               ))}
             </div>
           )}
@@ -185,14 +226,48 @@ function EventsPage() {
           ) : (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {past.map((e) => (
-                <EventCard key={e.event_id || e.title} event={e} past />
+                <EventCard
+                  key={e.event_id || e.title}
+                  event={e}
+                  past
+                  onRegister={handleRegister}
+                />
+
               ))}
             </div>
           )}
         </div>
       </section>
 
+      <Dialog
+        open={selected !== null}
+        onOpenChange={(open) => !open && setSelected(null)}
+      >
+        <DialogContent className="max-h-[90vh] w-[calc(100vw-2rem)] max-w-2xl overflow-hidden p-0 sm:w-full">
+          <DialogHeader className="border-b border-border px-5 py-4 text-left sm:px-6">
+            <DialogTitle className="pr-8 text-lg font-semibold leading-snug">
+              Register for {selected?.title || "this event"}
+            </DialogTitle>
+            <DialogDescription className="sr-only">
+              Registration form for {selected?.title || "this event"}
+            </DialogDescription>
+          </DialogHeader>
+          {selected && (
+            <iframe
+              key={selected.event_id || selected.title}
+              src={buildFormUrl(selected.title)}
+              title={`Registration form for ${selected.title}`}
+              className="h-[70vh] max-h-[70vh] w-full border-0"
+              loading="lazy"
+            >
+              Loading…
+            </iframe>
+          )}
+        </DialogContent>
+      </Dialog>
+
       <Footer />
+
     </div>
   );
 }
