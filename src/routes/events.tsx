@@ -123,6 +123,15 @@ function EventsPage() {
   });
 
   const { upcoming, past } = splitEvents(data ?? []);
+  const [selected, setSelected] = useState<SnmEvent | null>(null);
+
+  const handleRegister = (event: SnmEvent) => {
+    trackEvent("event_register_click", {
+      event_id: event.event_id,
+      event_title: event.title,
+    });
+    setSelected(event);
+  };
 
   return (
     <div className="min-h-screen bg-background">
