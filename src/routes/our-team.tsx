@@ -32,6 +32,7 @@ type Member = {
   more: string[];
   expertise: string[];
   accent: "teal" | "coral";
+  photo: string;
 };
 
 const TEAM: Member[] = [
