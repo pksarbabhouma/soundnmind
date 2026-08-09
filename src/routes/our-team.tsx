@@ -3,6 +3,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SectionBadge } from "@/components/SectionBadge";
+import sourishPhoto from "@/assets/team/Sourish_Choudhury.png.asset.json";
+import debashishPhoto from "@/assets/team/Debashish_Das.png.asset.json";
+import susantoPhoto from "@/assets/team/Susanto_Paul.jpeg.asset.json";
+import tanushreePhoto from "@/assets/team/Tanusree_Biswas.jpg.asset.json";
 
 export const Route = createFileRoute("/our-team")({
   head: () => ({
@@ -28,6 +32,7 @@ type Member = {
   more: string[];
   expertise: string[];
   accent: "teal" | "coral";
+  photo: string;
 };
 
 const TEAM: Member[] = [
@@ -35,6 +40,7 @@ const TEAM: Member[] = [
     name: "Sourish Choudhury",
     role: "Founder & Director",
     initials: "SC",
+    photo: sourishPhoto.url,
     accent: "teal",
     intro:
       "Sourish Choudhury is the Founder and Director of Sound \u2019N\u2019 Mind Foundation and a passionate advocate for emotional wellbeing and preventive mental health.",
@@ -57,6 +63,7 @@ const TEAM: Member[] = [
     name: "Debashish Das",
     role: "Co-Founder & Director",
     initials: "DD",
+    photo: debashishPhoto.url,
     accent: "coral",
     intro:
       "Debashish Das is a mindfulness-based emotional wellness practitioner and sound frequency guide with professional experience across the medical and technology sectors.",
@@ -76,6 +83,7 @@ const TEAM: Member[] = [
     name: "Susanto Paul",
     role: "Chief Operating Officer",
     initials: "SP",
+    photo: susantoPhoto.url,
     accent: "coral",
     intro:
       "Susanto Paul oversees operations and programme implementation, helping translate the Foundation\u2019s vision into impactful community initiatives.",
@@ -96,6 +104,7 @@ const TEAM: Member[] = [
     name: "Tanushree Biswas",
     role: "Strategy Advisor",
     initials: "TB",
+    photo: tanushreePhoto.url,
     accent: "teal",
     intro:
       "Tanushree Biswas supports the Foundation\u2019s strategic planning, programme coordination, and community engagement initiatives.",
@@ -132,10 +141,14 @@ function MemberCard({ member }: { member: Member }) {
     <article className="group rounded-2xl border border-border bg-card p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-cta">
       <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left sm:gap-6">
         <div
-          className={`mb-5 grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-full ${avatarBg} text-2xl font-bold text-foreground/70 ring-4 ring-background transition-transform duration-300 group-hover:scale-105 sm:mb-0`}
-          aria-hidden="true"
+          className={`mb-5 block h-24 w-24 shrink-0 overflow-hidden rounded-full ${avatarBg} text-2xl font-bold text-foreground/70 ring-4 ring-background transition-transform duration-300 group-hover:scale-105 sm:mb-0`}
         >
-          {member.initials}
+          <img
+            src={member.photo}
+            alt={`${member.name}, ${member.role}`}
+            loading="lazy"
+            className="h-full w-full object-cover object-top"
+          />
         </div>
         <div>
           <h3 className="text-xl font-semibold tracking-tight text-foreground">{member.name}</h3>
