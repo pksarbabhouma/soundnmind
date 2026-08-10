@@ -353,8 +353,8 @@ function LandingPage() {
                 <div className="min-w-0 flex-1">
                   <h3 className="text-2xl font-bold text-foreground sm:text-3xl">{p.title}</h3>
                   {p.partner && (
-                    <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground">
-                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                    <div className="mt-3 inline-flex max-w-full items-start gap-2 rounded-full border border-border bg-background px-3 py-1 text-left text-xs font-medium text-muted-foreground">
+                      <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                       {p.partner}
                     </div>
                   )}
