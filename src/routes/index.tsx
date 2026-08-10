@@ -324,7 +324,7 @@ function LandingPage() {
               {
                 icon: "🏫",
                 title: "Schools – MindWell Club",
-                partner: "ELMA Initiative",
+                partner: "In collaboration with ELMA",
                 description: "Helping students, educators, and school communities build emotional literacy, resilience, mindfulness, and healthy relationships through the MindWell Club.",
                 primary: { label: "Bring to Your School", href: "/our-work#schools" },
                 secondary: { label: "Sponsor a School", href: "/get-involved#donate" },
@@ -334,7 +334,7 @@ function LandingPage() {
               {
                 icon: "🎗️",
                 title: "Cancer Warriors & Caregivers",
-                partner: null,
+                partner: "In collaboration with St. Jude India ChildCare Centres & Premashraya",
                 description: "Providing compassionate emotional support and resilience-building for individuals living with cancer and the caregivers who walk alongside them.",
                 primary: { label: "Explore Program", href: "/our-work#cancer-warriors" },
                 secondary: { label: "Donate for Care", href: "/get-involved#donate" },
@@ -353,8 +353,8 @@ function LandingPage() {
                 <div className="min-w-0 flex-1">
                   <h3 className="text-2xl font-bold text-foreground sm:text-3xl">{p.title}</h3>
                   {p.partner && (
-                    <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-muted-foreground">
-                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                    <div className="mt-3 inline-flex max-w-full items-start gap-2 rounded-full border border-border bg-background px-3 py-1 text-left text-xs font-medium text-muted-foreground">
+                      <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                       {p.partner}
                     </div>
                   )}
