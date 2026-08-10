@@ -324,7 +324,7 @@ function LandingPage() {
               {
                 icon: "🏫",
                 title: "Schools – MindWell Club",
-                partner: "ELMA Initiative",
+                partner: "In collaboration with ELMA",
                 description: "Helping students, educators, and school communities build emotional literacy, resilience, mindfulness, and healthy relationships through the MindWell Club.",
                 primary: { label: "Bring to Your School", href: "/our-work#schools" },
                 secondary: { label: "Sponsor a School", href: "/get-involved#donate" },
@@ -334,7 +334,7 @@ function LandingPage() {
               {
                 icon: "🎗️",
                 title: "Cancer Warriors & Caregivers",
-                partner: null,
+                partner: "In collaboration with St. Jude India ChildCare Centres & Premashraya",
                 description: "Providing compassionate emotional support and resilience-building for individuals living with cancer and the caregivers who walk alongside them.",
                 primary: { label: "Explore Program", href: "/our-work#cancer-warriors" },
                 secondary: { label: "Donate for Care", href: "/get-involved#donate" },
