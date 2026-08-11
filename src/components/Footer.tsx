@@ -1,4 +1,5 @@
 import { SocialLinks } from "@/components/SocialLinks";
+import { MapPin, Phone } from "lucide-react";
 
 
 export function Footer() {
@@ -19,7 +20,7 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50 mb-4">Contact</h3>
             <ul className="space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2">
-                <span>📍</span>
+                <span><MapPin className="h-4 w-4 text-white" aria-hidden="true" /></span>
                 <span>
                   5/A, Second Lane,<br />
                   Beside Adabasi Kalyan Sangha,<br />
@@ -28,7 +29,7 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-start gap-2">
-                <span>📞</span>
+                <span><Phone className="h-4 w-4 text-white" aria-hidden="true" /></span>
                 <a href="tel:+919330158041" className="hover:text-white transition-colors">9330158041</a>
               </li>
               <li className="flex items-start gap-2">
@@ -46,7 +47,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 flex items-center justify-center">
           <p className="text-sm text-white/50">
-            © 2026 Sound N Mind. All rights reserved.
+            © 2026 Sound N Mind Foundation. All rights reserved.
           </p>
         </div>
       </div>
